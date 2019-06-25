@@ -1,7 +1,0 @@
-{
-  "name": "UniCook",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
