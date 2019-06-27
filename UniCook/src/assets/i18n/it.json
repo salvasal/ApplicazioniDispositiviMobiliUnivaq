@@ -1,0 +1,6 @@
+{
+  "LOGIN_ERROR_TITLE": "Errore Login",
+  "LOGIN_ERROR_SUB_TITLE": "Username e/o password errate!",
+  "USERNAME_REQUIRED": "Username obbligatorio",
+  "PASSWORD_REQUIRED": "Password obbligatorio"
+}

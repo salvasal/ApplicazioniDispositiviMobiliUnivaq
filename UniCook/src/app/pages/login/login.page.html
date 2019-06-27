@@ -1,9 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title color="Light" text-center>UniCook</ion-title>
+    <ion-item>
+      <ion-icon name="arrow-round-back" padding color="light" align-items-baseline="left"></ion-icon>
+      <ion-title color="light" text-center class="title-text">UniCook</ion-title>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="bg-light">
+  <div class="bg-light"></div>
+  <!-- Logo -->
+  <div padding-horizontal text-center class="animated fadeInDown">
+    <div class="logo"></div>
+  </div>
+  <!-- FormLogin -->
+  <form [formGroup]="formLogin" class="bg-light">
+    <div text-left padding-horizontal>
+      <ion-text>USERNAME</ion-text>
+    </div>
+    <div padding text-left>
+      <input padding-horizontal type="text" formControlName="username" />
+      <p class="text08" *ngIf="formLogin.get('username').touched && formLogin.get('username').invalid">
+        {{ 'USERNAME_REQUIRED' | translate }}
+      </p>
+    </div>
+    <div text-left padding-horizontal>
+    <ion-text>PASSWORD</ion-text>
+    </div>
+    <div padding text-left>
+    <input padding-horizontal type="password" formControlName="password" />
+    <p class="text08" *ngIf="formLogin.get('password').touched && formLogin.get('password').invalid">
+      {{ 'PASSWORD_REQUIRED' | translate }}
+    </p>
+    </div>
+  </form>
 
+  <!-- allinaere e fare i bottoni -->
 </ion-content>
