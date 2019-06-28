@@ -2,5 +2,9 @@
   "LOGIN_ERROR_TITLE": "Login error",
   "LOGIN_ERROR_SUB_TITLE": "Username and/or password Wrong!",
   "USERNAME_REQUIRED": "Username required",
-  "PASSWORD_REQUIRED": "Password required"
+  "PASSWORD_REQUIRED": "Password required",
+  "LOGIN_BUTTON": "Enter",
+  "LOGIN_ERROR_SUB_TEXT_TITLE": "One of the two fields was not filled",
+  "RECOVERY_BUTTON": "Password Recovery",
+  "REGISTER_BUTTON": "Sign In"
 }

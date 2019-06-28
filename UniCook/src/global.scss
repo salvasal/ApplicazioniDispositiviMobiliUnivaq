@@ -65,14 +65,34 @@ ion-toolbar {
 }
 
 .title-text {
-  padding-right: 65px;
+  padding-right: 75px;
 }
 
 .logo {
   width: 150px;
-  height: 200px;
+  height: 150px;
   margin: 20px auto 8px;
   border-radius: 10%;
   background: url("/assets/images/unicook.png") no-repeat;
   background-size: 100%;
+}
+
+ion-item {
+  --ion-item-background: transparent;
+}
+
+.item.sc-ion-label-md-h, .item .sc-ion-label-md-h {
+  text-align: center;
+  color: var(--ion-color-primary-shade);
+  font-weight: bold;
+}
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+input {
+  border-color: var(--ion-color-primary);
 }
