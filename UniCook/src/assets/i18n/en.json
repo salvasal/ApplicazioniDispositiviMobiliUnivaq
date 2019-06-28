@@ -6,5 +6,9 @@
   "LOGIN_BUTTON": "Enter",
   "LOGIN_ERROR_SUB_TEXT_TITLE": "One of the two fields was not filled",
   "RECOVERY_BUTTON": "Password Recovery",
-  "REGISTER_BUTTON": "Sign In"
+  "REGISTER_BUTTON": "Sign In",
+  "REGISTER_ERROR_SUB_TITLE": "One of the fields was not filled",
+  "NAME_REQUIRED": "Name required",
+  "SURNAME_REQUIRED": "Surname required",
+  "DATE_REQUIRED": "Date required"
 }

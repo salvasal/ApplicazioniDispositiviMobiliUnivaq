@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
     this.navController.navigateRoot('login');
   }
   onRegister() {
-    this.navController.navigateRoot('login');
+    this.navController.navigateRoot('registrazione');
   }
   async showLoginTextError() {
     const alert = await this.alertController.create({

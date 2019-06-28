@@ -6,5 +6,9 @@
   "LOGIN_BUTTON": "Accedi",
   "LOGIN_ERROR_SUB_TEXT_TITLE": "Uno dei due campi non è stato riempito",
   "RECOVERY_BUTTON": "Recupera Password",
-  "REGISTER_BUTTON": "Registrati"
+  "REGISTER_BUTTON": "Registrati",
+  "REGISTER_ERROR_SUB_TITLE": "Uno dei campi non è stato riempito",
+  "NAME_REQUIRED": "Nome obbligatorio",
+  "SURNAME_REQUIRED": "Cognome obbligatorio",
+  "DATE_REQUIRED": "Data obbligatoria"
 }
