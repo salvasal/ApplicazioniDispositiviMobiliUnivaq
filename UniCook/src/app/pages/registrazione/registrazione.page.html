@@ -37,5 +37,42 @@
         {{ 'DATE_REQUIRED' | translate }}
       </p>
     </ion-item>
+    <ion-item position="floating" no-padding class="animated fadeInUp">
+      <ion-label>SESSO</ion-label>
+    </ion-item>
+    <ion-list>
+      <ion-radio-group>
+        <ion-item>
+          <ion-label text-left="10px">Uomo</ion-label>
+          <ion-radio slot="start" value="biff" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label text-left="10px">Donna</ion-label>
+          <ion-radio slot="start" value="griff"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-item position="floating" no-padding class="animated fadeInUp">
+        <ion-label>USERNAME</ion-label>
+    </ion-item>
+    <ion-item position="floating" no-padding class="animated fadeInUp">
+        <ion-input color="secondary" type="text" formControlName="usernamer"></ion-input>
+    </ion-item>
+    <form formGroupName="passwordsGroup" class="bg-light">
+    <ion-item position="floating" no-padding class="animated fadeInUp">
+        <ion-label>PASSWORD</ion-label>
+    </ion-item>
+    <ion-item position="floating" no-padding class="animated fadeInUp">
+        <ion-input color="secondary" type="password" formControlName="passwordr"></ion-input>
+    </ion-item>
+    <ion-item position="floating" no-padding class="animated fadeInUp">
+        <ion-label>RIPETI PASSWORD</ion-label>
+    </ion-item>
+    <ion-item position="floating" no-padding class="animated fadeInUp">
+        <ion-input color="secondary" type="password" formControlName="pconfirm"></ion-input>
+    </ion-item>
+    </form>
   </form>
+
+    <!--mettere bottone Registrati-->
 </ion-content>

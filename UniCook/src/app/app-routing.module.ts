@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'registrazione',
-    loadChildren: './registrazione/registrazione.module#RegistrazionePageModule'
+    loadChildren: './pages/registrazione/registrazione.module#RegistrazionePageModule'
   }
 ];
 

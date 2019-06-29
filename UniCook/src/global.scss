@@ -96,3 +96,9 @@ ion-datetime {
   margin: 5px;
   color: var(--ion-color-primary);
 }
+
+ion-list {
+  text-decoration-color: var(--ion-color-primary);
+  --color: var(--ion-color-primary);
+  --color-checked: var(--ion-color-primary);
+}

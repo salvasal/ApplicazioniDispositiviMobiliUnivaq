@@ -11,7 +11,6 @@ import {TranslateService} from '@ngx-translate/core';
 export class RegistrazionePage implements OnInit {
   private registerForm: FormGroup;
   private registerSubTitle: string;
-  private customPickerOptions: any;
 
   constructor(private navController: NavController,
               private formBuilder: FormBuilder,
@@ -32,16 +31,16 @@ export class RegistrazionePage implements OnInit {
       sesso: ['', Validators.compose([
         Validators.required
       ])],
-      username: ['', Validators.compose([
+      usernamer: ['', Validators.compose([
         Validators.required
       ])],
       passwordsGroup: this.formBuilder.group({
-        password: ['', Validators.compose([
+        passwordr: ['', Validators.compose([
           Validators.required
         ])],
         pconfirm: ['', Validators.compose([
           Validators.required
-        ])]
+        ])],
       })
     });
     this.initTranslate();
