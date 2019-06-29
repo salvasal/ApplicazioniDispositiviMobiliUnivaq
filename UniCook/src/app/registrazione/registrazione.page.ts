@@ -44,18 +44,6 @@ export class RegistrazionePage implements OnInit {
         ])]
       })
     });
-    this.customPickerOptions = {
-      buttons: [{
-        text: 'Save',
-        handler: () => console.log('Clicked Save!')
-      }, {
-        text: 'Log',
-        handler: () => {
-          console.log('Clicked Log. Do not Dismiss.');
-          return false;
-        }
-      }]
-    };
     this.initTranslate();
   }
 

@@ -10,5 +10,6 @@
   "REGISTER_ERROR_SUB_TITLE": "Uno dei campi non è stato riempito",
   "NAME_REQUIRED": "Nome obbligatorio",
   "SURNAME_REQUIRED": "Cognome obbligatorio",
-  "DATE_REQUIRED": "Data obbligatoria"
+  "DONE_TEXT": "FATTO",
+  "CANCEL_TEXT": "ANNULLA"
 }

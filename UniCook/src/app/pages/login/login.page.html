@@ -19,7 +19,7 @@
       <ion-label>USERNAME</ion-label>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
-      <input class="center-block" padding-horizontal type="text" formControlName="username" />
+        <ion-input color="secondary" type="text" formControlName="username"></ion-input>
       <p text-center class="text08" *ngIf="formLogin.get('username').touched && formLogin.get('username').invalid">
         {{ 'USERNAME_REQUIRED' | translate }}
       </p>
@@ -28,7 +28,7 @@
       <ion-label>PASSWORD</ion-label>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
-      <input class="center-block" padding-horizontal type="password" formControlName="password" />
+        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
       <p text-center class="text08" *ngIf="formLogin.get('password').touched && formLogin.get('password').invalid">
         {{ 'PASSWORD_REQUIRED' | translate }}
       </p>

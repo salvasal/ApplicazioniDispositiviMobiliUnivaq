@@ -87,12 +87,12 @@ ion-item {
   font-weight: bold;
 }
 
-.center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+ion-input {
+  border-color: var(--ion-color-primary);
+  margin: 20px;
 }
 
-input {
-  border-color: var(--ion-color-primary);
+ion-datetime {
+  margin: 5px;
+  color: var(--ion-color-primary);
 }

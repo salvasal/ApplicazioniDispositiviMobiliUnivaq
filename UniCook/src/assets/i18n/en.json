@@ -10,5 +10,7 @@
   "REGISTER_ERROR_SUB_TITLE": "One of the fields was not filled",
   "NAME_REQUIRED": "Name required",
   "SURNAME_REQUIRED": "Surname required",
-  "DATE_REQUIRED": "Date required"
+  "DATE_REQUIRED": "Date required",
+  "DONE_TEXT": "done",
+  "CANCEL_TEXT": "cancel"
 }
