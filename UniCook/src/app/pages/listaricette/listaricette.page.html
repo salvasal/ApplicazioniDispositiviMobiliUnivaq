@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-title color="light" text-right class="title-text">UniCook</ion-title>
+      <ion-button size="small" expand="block" color="light" class="text-color-bottom" (click)="onLogin()">
+        LOGIN
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" color="primary">
+      <ion-tab-button tab="categorie">
+        <ion-icon name="list"></ion-icon>
+        <ion-label>{{ 'CATEGORIE_TAB' | translate }}</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="ingredienti">
+        <ion-icon name="pizza"></ion-icon>
+        <ion-label>{{ 'INGREDIENTI_TAB' | translate }}</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="listapreferiti">
+        <ion-icon name="star"></ion-icon>
+        <ion-label>{{ 'LISTAPREFERITI_TAB' | translate }}</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

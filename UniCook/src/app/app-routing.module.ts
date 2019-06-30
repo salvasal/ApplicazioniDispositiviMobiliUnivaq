@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'listaricette',
     pathMatch: 'full'
   },
   {
@@ -14,7 +14,10 @@ const routes: Routes = [
   {
     path: 'registrazione',
     loadChildren: './pages/registrazione/registrazione.module#RegistrazionePageModule'
-  }
+  },
+  {
+    path: 'listaricette',
+    loadChildren: './pages/listaricette/listaricette.module#ListaricettePageModule' }
 ];
 
 @NgModule({

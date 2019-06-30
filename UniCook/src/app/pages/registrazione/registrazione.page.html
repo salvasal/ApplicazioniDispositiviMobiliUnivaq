@@ -15,27 +15,18 @@
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
         <ion-input color="secondary" type="text" formControlName="nome"></ion-input>
-      <p text-center class="text08" *ngIf="registerForm.get('nome').touched && registerForm.get('nome').invalid">
-        {{ 'NAME_REQUIRED' | translate }}
-      </p>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
       <ion-label>COGNOME</ion-label>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
         <ion-input color="secondary" type="text" formControlName="cognome"></ion-input>
-      <p text-center class="text08" *ngIf="registerForm.get('cognome').touched && registerForm.get('cognome').invalid">
-        {{ 'SURNAME_REQUIRED' | translate }}
-      </p>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
       <ion-label>DATA DI NASCITA</ion-label>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
         <ion-datetime displayFormat="DD/MM/YYYY" doneText="{{ 'DONE_TEXT' | translate }}" cancelText="{{ 'CANCEL_TEXT' | translate}}" formControlName="datanascita"></ion-datetime>
-      <p text-center class="text08" *ngIf="registerForm.get('datanascita').touched && registerForm.get('datanascita').invalid">
-        {{ 'DATE_REQUIRED' | translate }}
-      </p>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
       <ion-label>SESSO</ion-label>
@@ -72,7 +63,10 @@
         <ion-input color="secondary" type="password" formControlName="pconfirm"></ion-input>
     </ion-item>
     </form>
+    <div margin-top="20px">
+        <ion-button size="medium" expand="block" color="primary" (click)="onRegister()">
+            {{ 'REGISTER_BUTTON' | translate }}
+        </ion-button>
+    </div>
   </form>
-
-    <!--mettere bottone Registrati-->
 </ion-content>

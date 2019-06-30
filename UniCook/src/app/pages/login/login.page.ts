@@ -33,13 +33,16 @@ export class LoginPage implements OnInit {
   }
 
   onLogin() {
-    this.navController.navigateRoot('login');
+    this.navController.navigateRoot('listaricette');
   }
   onRecovery() {
     this.navController.navigateRoot('login');
   }
   onRegister() {
     this.navController.navigateRoot('registrazione');
+  }
+  backtolistaricette() {
+    this.navController.navigateRoot('listaricette');
   }
   async showLoginTextError() {
     const alert = await this.alertController.create({

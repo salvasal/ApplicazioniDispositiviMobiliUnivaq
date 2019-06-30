@@ -49,6 +49,9 @@ export class RegistrazionePage implements OnInit {
   backtologin() {
     this.navController.navigateRoot('login');
   }
+  onRegister() {
+    this.navController.navigateRoot('login');
+  }
 
   private initTranslate() {
     this.translateService.get('REGISTER_ERROR_SUB_TITLE').subscribe((data) => {

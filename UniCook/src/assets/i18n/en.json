@@ -12,5 +12,8 @@
   "SURNAME_REQUIRED": "Surname required",
   "DATE_REQUIRED": "Date required",
   "DONE_TEXT": "done",
-  "CANCEL_TEXT": "cancel"
+  "CANCEL_TEXT": "cancel",
+  "CATEGORIE_TAB": "CATEGORIES",
+  "INGREDIENTI_TAB": "INGREDIENTS",
+  "LISTAPREFERITI_TAB": "FAVORITE LIST"
 }
