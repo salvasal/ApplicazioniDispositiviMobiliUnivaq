@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   {
     path: 'listaricette',
-    loadChildren: './pages/listaricette/listaricette.module#ListaricettePageModule' }
+    loadChildren: './pages/listaricette/listaricette.module#ListaricettePageModule' },
+  { path: 'recuperopassword', loadChildren: './pages/recuperopassword/recuperopassword.module#RecuperopasswordPageModule' }
 ];
 
 @NgModule({

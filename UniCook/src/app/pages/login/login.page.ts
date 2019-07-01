@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
     this.navController.navigateRoot('listaricette');
   }
   onRecovery() {
-    this.navController.navigateRoot('login');
+    this.navController.navigateRoot('recuperopassword');
   }
   onRegister() {
     this.navController.navigateRoot('registrazione');
