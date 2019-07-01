@@ -11,7 +11,23 @@ import {TranslateModule} from '@ngx-translate/core';
 const routes: Routes = [
   {
     path: '',
-    component: ListaricettePage
+    component: ListaricettePage,
+    children: [
+        {
+            path: 'listacategorie',
+            children: [
+                {
+                    path: '',
+                    loadChildren: '../listacategorie/listacategorie.module#ListacategoriePageModule'
+                }
+            ]
+        },
+        {
+            path: '',
+            redirectTo: 'listaricette/listacategorie',
+            pathMatch: 'full'
+        }
+    ]
   }
 ];
 
@@ -21,7 +37,7 @@ const routes: Routes = [
         FormsModule,
         IonicModule,
         RouterModule.forChild(routes),
-        TranslateModule
+        TranslateModule.forChild()
     ],
   declarations: [ListaricettePage]
 })
