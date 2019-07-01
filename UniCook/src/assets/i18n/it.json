@@ -17,5 +17,6 @@
   "INGREDIENTI_TAB": "INGREDIENTI",
   "LISTAPREFERITI_TAB": "LISTA PREFERITI",
   "RECOVERY_ERROR_TITLE": "Username e/o chiave di recupero errate!",
-  "CHIAVERECUPERO_REQUIRED":"Chiave di recupero obbligatoria!"
+  "CHIAVERECUPERO_REQUIRED":"Chiave di recupero obbligatoria!",
+  "CHIAVERECUPERO_BUTTON": "Recupera"
 }

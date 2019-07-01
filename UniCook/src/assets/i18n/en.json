@@ -17,5 +17,6 @@
   "INGREDIENTI_TAB": "INGREDIENTS",
   "LISTAPREFERITI_TAB": "FAVORITE LIST",
   "RECOVERY_ERROR_TITLE": "Username and/or recovery key Wrong!",
-  "CHIAVERECUPERO_REQUIRED": "Recovery key required"
+  "CHIAVERECUPERO_REQUIRED": "Recovery key required",
+  "CHIAVERECUPERO_BUTTON": "Recover"
 }

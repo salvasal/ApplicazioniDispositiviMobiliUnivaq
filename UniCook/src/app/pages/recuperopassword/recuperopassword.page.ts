@@ -33,5 +33,7 @@ export class RecuperopasswordPage implements OnInit {
  backtologin() {
     this.navController.navigateRoot('login');
  }
+ onRecovery() {
+ }
 
 }
