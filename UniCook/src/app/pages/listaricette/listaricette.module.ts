@@ -11,23 +11,7 @@ import {TranslateModule} from '@ngx-translate/core';
 const routes: Routes = [
   {
     path: '',
-    component: ListaricettePage,
-    children: [
-        {
-            path: 'listacategorie',
-            children: [
-                {
-                    path: '',
-                    loadChildren: '../listacategorie/listacategorie.module#ListacategoriePageModule'
-                }
-            ]
-        },
-        {
-            path: '',
-            redirectTo: 'listaricette/listacategorie',
-            pathMatch: 'full'
-        }
-    ]
+    component: ListaricettePage
   }
 ];
 

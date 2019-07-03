@@ -18,5 +18,6 @@
   "LISTAPREFERITI_TAB": "LISTA PREFERITI",
   "RECOVERY_ERROR_TITLE": "Username e/o chiave di recupero errate!",
   "CHIAVERECUPERO_REQUIRED":"Chiave di recupero obbligatoria!",
-  "CHIAVERECUPERO_BUTTON": "Recupera"
+  "CHIAVERECUPERO_BUTTON": "Recupera",
+  "FILTERS": "Filtri"
 }

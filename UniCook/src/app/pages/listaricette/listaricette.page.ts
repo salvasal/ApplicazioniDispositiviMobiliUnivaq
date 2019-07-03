@@ -15,4 +15,7 @@ export class ListaricettePage implements OnInit {
   onLogin() {
     this.navController.navigateRoot('login');
   }
+  onListacategorie() {
+    this.navController.navigateRoot('listacategorie');
+  }
 }

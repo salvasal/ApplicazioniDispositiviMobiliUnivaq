@@ -21,8 +21,11 @@ const routes: Routes = [
   {
     path: 'recuperopassword',
     loadChildren: './pages/recuperopassword/recuperopassword.module#RecuperopasswordPageModule'
+  },
+  {
+    path: 'listacategorie',
+    loadChildren: './pages/listacategorie/listacategorie.module#ListacategoriePageModule'
   }
-
 ];
 
 @NgModule({
