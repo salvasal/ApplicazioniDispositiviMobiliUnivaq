@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
 import {AlertController, NavController} from '@ionic/angular';
+import {UtenteService} from '../../services/utente.service';
+/* import {Account, UtenteService} from '../../services/utente.service'; */
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,8 @@ export class LoginPage implements OnInit {
   constructor(private formbuilder: FormBuilder,
               private translateService: TranslateService,
               private alertController: AlertController,
-              private navController: NavController) {
+              private navController: NavController,
+              private utenteService: UtenteService) {
   }
 
   ngOnInit() {
@@ -34,6 +37,17 @@ export class LoginPage implements OnInit {
 
   onLogin() {
     this.navController.navigateRoot('listaricette');
+    /* const account: Account = this.loginFormModel.value;
+    this.utenteService.login(account).subscribe((utente: Utente) => {
+          this.loginFormModel.reset();
+          this.navController.navigateRoot('listaricette');
+        },
+        (err: HttpErrorResponse) => {
+          if (err.status === 401) {
+            console.error('login request error: ' + err.status);
+            this.showLoginError();
+          }
+        }); */
   }
   onRecovery() {
     this.navController.navigateRoot('recuperopassword');
