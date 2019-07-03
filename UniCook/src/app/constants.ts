@@ -10,7 +10,7 @@ export const UTENTE_STORAGE = 'utente';
 
 export const USE_PROXY = true;
 
-export const URL_BASE = USE_PROXY ? 'api' : 'http://localhost:8080/unicook/api';
+export const URL_BASE = USE_PROXY ? 'api' : 'http://localhost:8080/unicookserver/api';
 
 export const URL = {
     LOGIN: URL_BASE + '/login'

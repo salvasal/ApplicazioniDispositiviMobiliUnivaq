@@ -1,6 +1,6 @@
 {
   "/api/*": {
-    "target": "http://localhost:8080/unicook",
+    "target": "http://localhost:8080/unicookserver",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
