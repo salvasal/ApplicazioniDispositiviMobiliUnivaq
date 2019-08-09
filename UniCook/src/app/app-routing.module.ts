@@ -25,7 +25,11 @@ const routes: Routes = [
   {
     path: 'listacategorie',
     loadChildren: './pages/listacategorie/listacategorie.module#ListacategoriePageModule'
-  }
+  },  { path: 'listaingredienti', loadChildren: './src/app/pages/listaingredienti/listaingredienti.module#ListaingredientiPageModule' },
+  { path: 'listaingredienti', loadChildren: './src/app/pages/listaingredienti/listaingredienti.module#ListaingredientiPageModule' },
+  { path: 'listaingredienti', loadChildren: './listaingredienti/listaingredienti.module#ListaingredientiPageModule' },
+  { path: 'listaingredienti', loadChildren: './pages/listaingredienti/listaingredienti.module#ListaingredientiPageModule' }
+
 ];
 
 @NgModule({
