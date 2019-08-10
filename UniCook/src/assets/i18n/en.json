@@ -19,5 +19,6 @@
   "RECOVERY_ERROR_TITLE": "Username and/or recovery key Wrong!",
   "CHIAVERECUPERO_REQUIRED": "Recovery key required",
   "CHIAVERECUPERO_BUTTON": "Recover",
-  "FILTERS": "Filters"
+  "FILTERS": "Filters",
+  "SEARCH_BUTTON": "Look for recipe"
 }

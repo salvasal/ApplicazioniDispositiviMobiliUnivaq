@@ -19,5 +19,6 @@
   "RECOVERY_ERROR_TITLE": "Username e/o chiave di recupero errate!",
   "CHIAVERECUPERO_REQUIRED":"Chiave di recupero obbligatoria!",
   "CHIAVERECUPERO_BUTTON": "Recupera",
-  "FILTERS": "Filtri"
+  "FILTERS": "Filtri",
+  "SEARCH_BUTTON": "Cerca Ricetta"
 }
