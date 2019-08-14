@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>creapubblica</ion-title>
+    <ion-item>
+      <!-- icona per tornare a "listaricette" -->
+      <ion-icon name="arrow-round-back" padding color="light" align-items-baseline="left" (click)="backtolistaricette()"></ion-icon>
+      <!-- icona logo UniCook -->
+      <ion-title color="light" text-center class="title-text" style="padding-right: 30px">UniCook</ion-title>
+      <!-- icona per cancellare il contenuto della pagina: implementato come un semplice "refresh"-->
+      <ion-icon name="trash" padding color="light" align-items-baseline="left" (click)="onrefresh()"></ion-icon>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding></ion-content>
 
-</ion-content>
+<!-- footer: implementazione pulsante "Pubblica" per filtrare le ricette in base agli ingredienti selezionati -->
+<ion-footer>
+  <div margin-top="20px" margin-bottom="20px">
+    <!-- da implementare la funzione 'onpublic' al 'click' del bottone -->
+    <ion-button size="medium" expand="block" color="primary">
+      {{ 'CREATE_BUTTON' | translate }}
+    </ion-button>
+  </div>
+</ion-footer>

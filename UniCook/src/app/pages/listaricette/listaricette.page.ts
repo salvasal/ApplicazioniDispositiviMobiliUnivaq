@@ -21,4 +21,7 @@ export class ListaricettePage implements OnInit {
   onListaingredienti() {
     this.navController.navigateRoot('listaingredienti');
   }
+  onCreapubblica() {
+    this.navController.navigateRoot('creapubblica');
+  }
 }

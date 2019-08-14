@@ -20,5 +20,6 @@
   "CHIAVERECUPERO_REQUIRED":"Chiave di recupero obbligatoria!",
   "CHIAVERECUPERO_BUTTON": "Recupera",
   "FILTERS": "Filtri",
-  "SEARCH_BUTTON": "Cerca Ricetta"
+  "SEARCH_BUTTON": "Cerca Ricetta",
+  "CREATE_BUTTON": "Pubblica"
 }
