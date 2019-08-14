@@ -11,7 +11,64 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding></ion-content>
+<ion-content padding>
+  <ion-item style="font-size: 20px">Crea la tua ricetta</ion-item>
+  <!-- Titolo -->
+  <ion-item>
+    <ion-textarea maxlength="40" placeholder="Titolo *" style="margin-bottom: -10px; font-size: 18px"></ion-textarea>
+  </ion-item>
+  <!-- Descrizione -->
+  <ion-item>
+    <ion-textarea maxlength="70" placeholder="Breve Descrizione *" style="margin-bottom: -10px; font-size: 18px"></ion-textarea>
+  </ion-item>
+  <!-- Difficolta' -->
+  <ion-item>
+    <ion-label style="font-size: 18px; text-align: left">Difficolta'</ion-label>
+    <ion-select placeholder="seleziona..." style="font-size: 18px">
+      <ion-select-option value="easy">Facile</ion-select-option>
+      <ion-select-option value="medium">Media</ion-select-option>
+      <ion-select-option value="difficult">Difficile</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- Tempo -->
+  <ion-item>
+    <ion-label style="font-size: 18px; text-align: left">Tempo</ion-label>
+    <ion-select placeholder="seleziona..." style="font-size: 18px">
+      <ion-select-option value="10min">10 min</ion-select-option>
+      <ion-select-option value="20min">20 min</ion-select-option>
+      <ion-select-option value="30min">30 min</ion-select-option>
+      <ion-select-option value="45min">45 min</ion-select-option>
+      <ion-select-option value="1h">1 h</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- Categoria -->
+  <ion-item>
+    <ion-label style="font-size: 18px; text-align: left">Categoria</ion-label>
+    <ion-select placeholder="seleziona..." style="font-size: 18px">
+      <ion-select-option value="starter">Antipasto</ion-select-option>
+      <ion-select-option value="firstcourse">Primo</ion-select-option>
+      <ion-select-option value="secondcourse">Secondo</ion-select-option>
+      <ion-select-option value="dessert">Dessert</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- N. persone -->
+  <ion-item>
+    <ion-label style="font-size: 18px; text-align: left">Num. Persone</ion-label>
+    <ion-select placeholder="seleziona..." style="font-size: 18px">
+      <ion-select-option value="min">2 Persone</ion-select-option>
+      <ion-select-option value="max">4 Persone</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- Ingredienti -->
+  <ion-item>
+    <ion-textarea placeholder="Lista Ingredienti *" style="font-size: 18px"></ion-textarea>
+  </ion-item>
+  <!-- Preparazione -->
+    <ion-item>
+      <ion-textarea placeholder="Preparazione *" style="font-size: 18px"></ion-textarea>
+    </ion-item>
+  <!-- mancano le immagini (min 1, max 4) -->
+</ion-content>
 
 <!-- footer: implementazione pulsante "Pubblica" per filtrare le ricette in base agli ingredienti selezionati -->
 <ion-footer>
