@@ -13,7 +13,7 @@ export class CreapubblicaPage implements OnInit {
   ngOnInit() {
   }
   backtolistaricette() {
-    this.navController.navigateRoot('listaricette');
+    this.navController.navigateRoot('listaricette/lista');
   }
   onrefresh() {
     this.navController.navigateRoot('creapubblica');

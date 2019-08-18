@@ -13,7 +13,7 @@ export class ListaingredientiPage implements OnInit {
   ngOnInit() {
   }
   backtolistaricette() {
-    this.navController.navigateRoot('listaricette');
+    this.navController.navigateRoot('listaricette/lista');
   }
   onListacategorie() {
     this.navController.navigateRoot('listacategorie');

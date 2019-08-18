@@ -26,7 +26,8 @@ const routes: Routes = [
     path: 'listacategorie',
     loadChildren: './pages/listacategorie/listacategorie.module#ListacategoriePageModule'
   },
-  { path: 'listaingredienti', loadChildren: './pages/listaingredienti/listaingredienti.module#ListaingredientiPageModule' },  { path: 'creapubblica', loadChildren: './pages/creapubblica/creapubblica.module#CreapubblicaPageModule' }
+  { path: 'listaingredienti', loadChildren: './pages/listaingredienti/listaingredienti.module#ListaingredientiPageModule' },  { path: 'creapubblica', loadChildren: './pages/creapubblica/creapubblica.module#CreapubblicaPageModule' },
+  { path: 'lista', loadChildren: './pages/lista/lista.module#ListaPageModule' }
 
 
 ];

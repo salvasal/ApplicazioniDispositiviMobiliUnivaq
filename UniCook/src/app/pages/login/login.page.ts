@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
   }
 
   onLogin() {
-    this.navController.navigateRoot('listaricette');
+    this.navController.navigateRoot('listaricette/lista');
     /* const account: Account = this.loginFormModel.value;
     this.utenteService.login(account).subscribe((utente: Utente) => {
           this.loginFormModel.reset();
@@ -56,7 +56,7 @@ export class LoginPage implements OnInit {
     this.navController.navigateRoot('registrazione');
   }
   backtolistaricette() {
-    this.navController.navigateRoot('listaricette');
+    this.navController.navigateRoot('listaricette/lista');
   }
   async showLoginTextError() {
     const alert = await this.alertController.create({
