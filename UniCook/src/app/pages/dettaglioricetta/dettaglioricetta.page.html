@@ -1,12 +1,82 @@
 <ion-header>
   <ion-toolbar>
     <ion-item>
+      <!-- icona per tornare a "listaricette" -->
       <ion-icon name="arrow-round-back" padding color="light" align-items-baseline="left" (click)="backTolistaricette()"></ion-icon>
+      <!-- icona logo UniCook -->
       <ion-title color="light" text-center class="title-text">UniCook</ion-title>
+      <!-- icona preferiti -->
+      <ion-icon name="star-outline" padding color="light" align-items-baseline="left"></ion-icon>
     </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <ion-card>
+    <!-- immagine ricetta -->
+    <ion-grid>
+      <ion-row>
+        <ion-col style="width: 440px; height: 220px; background-color: #088cd6"></ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- informazioni ricetta -->
+    <ion-card-header style="margin-top: 12px">
+      <!-- categoria -->
+      <ion-badge style="background: #ffff70; color: #939393; margin-top: 5px; margin-bottom: 5px; position: absolute; top: -5px; left: 15px; text-transform: uppercase">categoria</ion-badge>
+      <!-- nome utente -->
+      <ion-card-title style="font-size: 18px; color: #939393; position: absolute; top: 18px; left: 200px; margin-top: 12px">Nome Utente</ion-card-title>
+      <!-- data -->
+      <ion-card-subtitle style="font-size: 15px; color: #939393; position: absolute; top: -5px; left: 200px;">mese giorno, anno</ion-card-subtitle>
+      <!-- ora -->
+      <ion-card-subtitle style="font-size: 15px; color: #939393; position: absolute; top: -5px; left: 320px;">00:00</ion-card-subtitle>
+      <!-- titolo -->
+      <ion-card-title style="font-size: 20px; color: #939393; margin-top: 12px">Nome della ricetta</ion-card-title>
+      <!-- descrizione -->
+      <ion-card-subtitle style="font-size: 15px; color: #939393">Descrizione della ricetta...</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- ingredienti -->
+      <ion-card-title style="font-size: 15px; color: #939393; margin-bottom: 4px; text-transform: uppercase">Ingredienti:</ion-card-title>
+      <!-- n. persone -->
+      <ion-card-subtitle style="font-size: 15px; color: #939393; position: absolute; top: -2px; left: 124px; text-transform: uppercase">n.persone</ion-card-subtitle>
+      <!-- tempo -->
+      <ion-card-subtitle style="font-size: 15px; color: #939393; position: absolute; top: -2px; left: 250px;">tempo</ion-card-subtitle>
+      <!-- difficolta' -->
+      <ion-card-subtitle style="font-size: 15px; color: #939393; position: absolute; top: -2px; left: 300px;">difficolta</ion-card-subtitle>
+      <!-- lista ingredienti -->
+      <ion-card-subtitle style="font-size: 15px; color: #939393">
+        Lista ingredienti:<br>
+        - ingrediente 1<br>
+        - ingrediente 2<br>
+        - ingredientte 3<br>
+      </ion-card-subtitle>
+    </ion-card-content>
+    <ion-card-content>
+      <!-- preparazione -->
+      <ion-card-title style="font-size: 15px; color: #939393; margin-bottom: 4px; text-transform: uppercase">Preparazione:</ion-card-title>
+      <ion-card-subtitle style="font-size: 15px; color: #939393">Preparazione della ricetta</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<!-- footer: implementazione pulsante "Valuta" per commentare la ricetta visitata nel dettaglio -->
+<ion-footer>
+  <div margin-top="20px" margin-bottom="20px">
+    <!-- -->
+    <ion-button size="medium" expand="block" color="primary">
+      {{ 'COMMENT' | translate }}
+    </ion-button>
+  </div>
+</ion-footer>
