@@ -28,7 +28,8 @@ const routes: Routes = [
   },
   { path: 'listaingredienti', loadChildren: './pages/listaingredienti/listaingredienti.module#ListaingredientiPageModule' },
   { path: 'creapubblica', loadChildren: './pages/creapubblica/creapubblica.module#CreapubblicaPageModule' },
-  { path: 'lista', loadChildren: './pages/lista/lista.module#ListaPageModule' },  { path: 'dettaglioricetta', loadChildren: './pages/dettaglioricetta/dettaglioricetta.module#DettaglioricettaPageModule' }
+  { path: 'lista', loadChildren: './pages/lista/lista.module#ListaPageModule' },  { path: 'dettaglioricetta', loadChildren: './pages/dettaglioricetta/dettaglioricetta.module#DettaglioricettaPageModule' },
+  { path: 'valutazione', loadChildren: './pages/valutazione/valutazione.module#ValutazionePageModule' }
 
 
 

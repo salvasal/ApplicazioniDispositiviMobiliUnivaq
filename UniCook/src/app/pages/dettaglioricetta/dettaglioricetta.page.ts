@@ -15,5 +15,8 @@ export class DettaglioricettaPage implements OnInit {
   backTolistaricette() {
     this.navController.navigateRoot('listaricette/lista');
   }
+  onValutazione() {
+    this.navController.navigateRoot('valutazione');
+  }
 
 }
