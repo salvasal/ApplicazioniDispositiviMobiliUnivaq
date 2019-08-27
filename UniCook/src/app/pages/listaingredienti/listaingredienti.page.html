@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
   <!-- elementi della pagina selezionabili -->
     <ion-item style="font-size: 20px">Seleziona gli Ingredienti</ion-item>
   <!-- elementi per lettera A -->
@@ -221,14 +222,23 @@
     <ion-checkbox checked="false"></ion-checkbox>
     <ion-label style="text-align: left; margin-left: 15px; font-weight: unset; font-size: 18px; color: #000;" >Ingrediente</ion-label>
   </ion-item>
-</ion-content>
+  </ion-list>
 
-<!-- footer: implementazione pulsante "cerca" per filtrare le ricette in base agli ingredienti selezionati -->
-<ion-footer>
   <div margin-top="20px" margin-bottom="20px">
     <!-- da implementare la funzione 'onSearch' al 'click' del bottone -->
     <ion-button size="medium" expand="block" color="primary">
       {{ 'SEARCH_BUTTON' | translate }}
     </ion-button>
   </div>
-</ion-footer>
+
+</ion-content>
+
+<!-- footer: implementazione pulsante "cerca" per filtrare le ricette in base agli ingredienti selezionati -->
+<!--<ion-footer>
+  <div margin-top="20px" margin-bottom="20px">
+     da implementare la funzione 'onSearch' al 'click' del bottone
+    <ion-button size="medium" expand="block" color="primary">
+      {{ 'SEARCH_BUTTON' | translate }}
+    </ion-button>
+  </div>
+</ion-footer>-->

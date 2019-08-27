@@ -6,7 +6,7 @@
       <!-- icona logo UniCook -->
       <ion-title color="light" text-center class="title-text" style="padding-right: 20px">UniCook</ion-title>
       <!-- icona preferiti -->
-      <ion-icon name="star-outline" padding color="light" align-items-baseline="left"></ion-icon>
+      <ion-icon name="star-outline" padding color="light" align-items-baseline="left" (click)="funzioneAlert()"></ion-icon>
     </ion-item>
   </ion-toolbar>
 </ion-header>
@@ -57,14 +57,22 @@
       <ion-card-subtitle style="font-size: 15px; color: #939393">Preparazione della ricetta</ion-card-subtitle>
     </ion-card-content>
   </ion-card>
-</ion-content>
 
-<!-- footer: implementazione pulsante "Valuta" per commentare la ricetta visitata nel dettaglio -->
-<ion-footer>
   <div margin-top="20px" margin-bottom="20px">
     <!-- -->
     <ion-button size="medium" expand="block" color="primary" (click)="onValutazione()">
       {{ 'COMMENT' | translate }}
     </ion-button>
   </div>
+
+</ion-content>
+
+<!-- footer: implementazione pulsante "Valuta" per commentare la ricetta visitata nel dettaglio
+<ion-footer>
+  <div margin-top="20px" margin-bottom="20px">
+    <ion-button size="medium" expand="block" color="primary" (click)="onValutazione()">
+      {{ 'COMMENT' | translate }}
+    </ion-button>
+  </div>
 </ion-footer>
+-->

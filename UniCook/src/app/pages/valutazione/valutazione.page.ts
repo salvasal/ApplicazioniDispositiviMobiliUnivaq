@@ -13,8 +13,11 @@ export class ValutazionePage implements OnInit {
 
   ngOnInit() {
   }
-  backtolistaricette() {
+  /*backtolistaricette() {
     this.navController.navigateRoot('listaricette/lista');
+  }*/
+  backtodettaglioricetta() {
+    this.navController.navigateRoot('dettaglioricetta');
   }
   async funzioneAlert() {
     const alert = await this.alertController.create({
