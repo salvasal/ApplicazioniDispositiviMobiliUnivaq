@@ -17,4 +17,8 @@ export class ListacategoriePage implements OnInit {
   backtolistaricette() {
    this.navController.navigateRoot('listaricette/lista');
   }
+
+    onDetails() {
+      this.navController.navigateRoot('listaricette');
+    }
 }
