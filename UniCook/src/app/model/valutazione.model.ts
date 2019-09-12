@@ -1,5 +1,5 @@
 import {Utente} from './utente.model';
-import {Ricetta} from './ricetta.module';
+import {Ricetta} from './ricetta.model';
 
 export class Valutazione {
     idvalutazione: string;
