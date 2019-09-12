@@ -12,91 +12,123 @@
 </ion-header>
 
 <ion-content padding>
-  <!-- <form></form> -->
+  <form [formGroup]="ricettaFormModel">
     <ion-list>
-  <ion-item style="font-size: 20px">Crea la tua ricetta</ion-item>
-  <!-- Titolo -->
-  <ion-item>
-    <ion-textarea type="text" maxlength="40" placeholder="Titolo *" style="margin-bottom: -10px; font-size: 18px"></ion-textarea>
-  </ion-item>
-  <!-- Descrizione -->
-  <ion-item>
-    <ion-textarea type="text" maxlength="70" placeholder="Breve Descrizione *" style="margin-bottom: -10px; font-size: 18px"></ion-textarea>
-  </ion-item>
-  <!-- Difficolta' -->
-  <ion-item>
-    <ion-label style="font-size: 18px; text-align: left">Difficolta'</ion-label>
-    <ion-select placeholder="seleziona..." style="font-size: 18px">
-      <ion-select-option value="easy">Facile</ion-select-option>
-      <ion-select-option value="medium">Media</ion-select-option>
-      <ion-select-option value="difficult">Difficile</ion-select-option>
-    </ion-select>
-  </ion-item>
-  <!-- Tempo -->
-  <ion-item>
-    <ion-label style="font-size: 18px; text-align: left">Tempo</ion-label>
-    <ion-select placeholder="seleziona..." style="font-size: 18px">
-      <ion-select-option value="10min">10 min</ion-select-option>
-      <ion-select-option value="20min">20 min</ion-select-option>
-      <ion-select-option value="30min">30 min</ion-select-option>
-      <ion-select-option value="45min">45 min</ion-select-option>
-      <ion-select-option value="1h">1 h</ion-select-option>
-    </ion-select>
-  </ion-item>
-  <!-- Categoria -->
-  <ion-item>
-    <ion-label style="font-size: 18px; text-align: left">Categoria</ion-label>
-    <ion-select placeholder="seleziona..." style="font-size: 18px">
-      <ion-select-option value="starter">Antipasto</ion-select-option>
-      <ion-select-option value="firstcourse">Primo</ion-select-option>
-      <ion-select-option value="secondcourse">Secondo</ion-select-option>
-      <ion-select-option value="dessert">Dessert</ion-select-option>
-    </ion-select>
-  </ion-item>
-  <!-- N. persone -->
-  <ion-item>
-    <ion-label style="font-size: 18px; text-align: left">Num. Persone</ion-label>
-    <ion-select placeholder="seleziona..." style="font-size: 18px">
-      <ion-select-option value="min">2 Persone</ion-select-option>
-      <ion-select-option value="max">4 Persone</ion-select-option>
-    </ion-select>
-  </ion-item>
-  <!-- Ingredienti -->
-  <ion-item>
-    <ion-textarea placeholder="Lista Ingredienti *" style="font-size: 18px"></ion-textarea>
-  </ion-item>
-  <!-- Preparazione -->
-    <ion-item>
-      <ion-textarea type="text" placeholder="Preparazione *" style="font-size: 18px"></ion-textarea>
-    </ion-item>
-  <!-- Immagini (min 1, max 3) -->
-  <ion-item>
-    <ion-textarea disabled="true" style="font-size: 18px; margin-bottom: -40px">Inserisci un'immagine (min. 1 - max. 3)</ion-textarea>
-  </ion-item>
-    <ion-grid>
-      <ion-row>
-        <!-- foto n.1 -->
-        <ion-col>
-          <ion-img src="/assets/images/foto01.jpg"></ion-img>
-        </ion-col>
-        <!-- foto n.2 -->
-        <ion-col>
-          <ion-img src="/assets/images/foto02.jpg"></ion-img>
-        </ion-col>
-        <!-- foto n.3 -->
-        <ion-col>
-          <ion-img src="/assets/images/foto03.jpg"></ion-img>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+      <ion-item style="font-size: 20px">{{ 'CREATE_RECIPE' | translate}}</ion-item>
+      <!-- Titolo -->
+      <ion-item>
+        <ion-textarea type="email" maxlength="40" placeholder="{{ 'TITLE' | translate}}" style="margin-bottom: -10px; font-size: 16px;" formControlName="titolo"></ion-textarea>
+        <p ion-text class="text08" *ngIf="ricettaFormModel.get('titolo').touched && ricettaFormModel.get('titolo').invalid">
+          <ion-text color="primary">{{ 'TITLE_REQUIRED' | translate}}</ion-text>
+        </p>
+      </ion-item>
+      <!-- Descrizione -->
+      <ion-item>
+        <ion-textarea type="email" maxlength="70" placeholder="{{ 'DESCRIPTION' | translate}}" style="font-size: 16px;" formControlName="descrizione"></ion-textarea>
+        <p ion-text class="text08" *ngIf="ricettaFormModel.get('descrizione').touched && ricettaFormModel.get('descrizione').invalid">
+          <ion-text color="primary">{{ 'DESCRIPTION_REQUIRED' | translate}}</ion-text>
+        </p>
+      </ion-item>
+      <!-- Difficolta' -->
+      <ion-item>
+        <ion-label style="font-size: 18px; text-align: left">{{ 'DIFFICULT' | translate}}</ion-label>
+        <!--
+        <ion-select>
+          <ion-select-option value="easy">Facile</ion-select-option>
+          <ion-select-option value="medium">Media</ion-select-option>
+          <ion-select-option value="difficult">Difficile</ion-select-option>
+        </ion-select>
+        -->
+        <ion-select>
+          <ion-select-option *ngFor="let t of difficoltaRicetta" [value]="t">{{t}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- Tempo -->
+      <ion-item>
+        <ion-label style="font-size: 18px; text-align: left">{{ 'TIME' | translate}}</ion-label>
+        <!--
+        <ion-select placeholder="seleziona..." style="font-size: 18px">
+          <ion-select-option value="10min">10 min</ion-select-option>
+          <ion-select-option value="20min">20 min</ion-select-option>
+          <ion-select-option value="30min">30 min</ion-select-option>
+          <ion-select-option value="45min">45 min</ion-select-option>
+          <ion-select-option value="1h">1 h</ion-select-option>
+        </ion-select>
+        -->
+        <ion-select>
+          <ion-select-option *ngFor="let t of tempiCotturaRicetta" [value]="t">{{t}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- Categoria -->
+      <ion-item>
+        <ion-label style="font-size: 18px; text-align: left">{{ 'CATEGORY' | translate}}</ion-label>
+        <!--
+        <ion-select placeholder="seleziona..." style="font-size: 18px">
+          <ion-select-option value="starter">Antipasto</ion-select-option>
+          <ion-select-option value="firstcourse">Primo</ion-select-option>
+          <ion-select-option value="secondcourse">Secondo</ion-select-option>
+          <ion-select-option value="dessert">Dessert</ion-select-option>
+        </ion-select>
+        -->
+        <ion-select>
+          <ion-select-option *ngFor="let t of categoriaRicetta" [value]="t">{{t}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- N. persone -->
+      <ion-item>
+        <ion-label style="font-size: 18px; text-align: left">{{ 'PEOPLE_NUMBER' | translate}}</ion-label>
+        <!--
+        <ion-select placeholder="seleziona..." style="font-size: 18px">
+          <ion-select-option value="min">2 Persone</ion-select-option>
+          <ion-select-option value="max">4 Persone</ion-select-option>
+        </ion-select>
+        -->
+        <ion-select>
+          <ion-select-option *ngFor="let t of numPersoneRicetta" [value]="t">{{t}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- Ingredienti -->
+      <ion-item>
+        <ion-textarea type="text" placeholder="{{ 'LIST_INGREDIENTS' | translate}}" style="font-size: 16px;" formControlName="ingredienti"></ion-textarea>
+        <p ion-text class="text08" *ngIf="ricettaFormModel.get('ingredienti').touched && ricettaFormModel.get('ingredienti').invalid">
+          <ion-text color="primary">{{ 'INGREDIENTS_LIST_REQUIRED' | translate }}</ion-text>
+        </p>
+      </ion-item>
+      <!-- Preparazione -->
+      <ion-item>
+        <ion-textarea type="text" placeholder="{{ 'PREPARATION' | translate}}" style="font-size: 16px;" formControlName="preparazione"></ion-textarea>
+        <p ion-text class="text08" *ngIf="ricettaFormModel.get('preparazione').touched && ricettaFormModel.get('preparazione').invalid">
+          <ion-text color="primary">{{ 'PREPARATION_REQUIRED' | translate }}</ion-text>
+        </p>
+      </ion-item>
+      <!-- Immagini (min 1, max 3) -->
+      <ion-item>
+        <ion-textarea disabled="true" style="font-size: 18px; margin-bottom: -40px">{{ 'IMG_INSERT' | translate}}</ion-textarea>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <!-- foto n.1 -->
+          <ion-col>
+            <ion-img src="/assets/images/foto01.jpg"></ion-img>
+          </ion-col>
+          <!-- foto n.2 -->
+          <ion-col>
+            <ion-img src="/assets/images/foto02.jpg"></ion-img>
+          </ion-col>
+          <!-- foto n.3 -->
+          <ion-col>
+            <ion-img src="/assets/images/foto03.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-list>
 
-      <div margin-top="20px" margin-bottom="20px">
-      <ion-button size="medium" expand="block" color="primary" (click)="funzioneAlert()">
+    <div margin-top="20px" margin-bottom="20px">
+      <ion-button size="medium" expand="block" color="primary" (click)="onSubmit()" [disabled]="!ricettaFormModel.valid" tappable>
         {{ 'CREATE_BUTTON' | translate }}
       </ion-button>
-      </div>
-
+    </div>
+  </form>
 </ion-content>
 
 <!-- footer: implementazione pulsante "Pubblica" per filtrare le ricette in base agli ingredienti selezionati -->
