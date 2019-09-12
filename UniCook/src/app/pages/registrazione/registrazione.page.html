@@ -11,34 +11,34 @@
   <!-- FormRegister -->
   <form [formGroup]="registerForm" class="bg-light">
     <ion-item position="floating" no-padding class="animated fadeInUp">
-      <ion-label>NOME</ion-label>
+      <ion-label>{{ 'SIGN_IN_NAME' | translate}}</ion-label>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
         <ion-input color="secondary" type="text" formControlName="nome"></ion-input>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
-      <ion-label>COGNOME</ion-label>
+      <ion-label>{{ 'SIGN_IN_SURNAME' | translate}}</ion-label>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
         <ion-input color="secondary" type="text" formControlName="cognome"></ion-input>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
-      <ion-label>DATA DI NASCITA</ion-label>
+      <ion-label>{{ 'SIGN_IN_DATE' | translate}}</ion-label>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
         <ion-datetime displayFormat="DD/MM/YYYY" doneText="{{ 'DONE_TEXT' | translate }}" cancelText="{{ 'CANCEL_TEXT' | translate}}" formControlName="datanascita"></ion-datetime>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
-      <ion-label>SESSO</ion-label>
+      <ion-label>{{ 'SIGN_IN_SEX' | translate}}</ion-label>
     </ion-item>
     <ion-list>
       <ion-radio-group>
         <ion-item>
-          <ion-label text-left="10px">Uomo</ion-label>
+          <ion-label text-left="10px">{{ 'SIGN_IN_MALE' | translate}}</ion-label>
           <ion-radio slot="start" value="biff" checked></ion-radio>
         </ion-item>
         <ion-item>
-          <ion-label text-left="10px">Donna</ion-label>
+          <ion-label text-left="10px">{{ 'SIGN_IN_FAMALE' | translate}}</ion-label>
           <ion-radio slot="start" value="griff"></ion-radio>
         </ion-item>
       </ion-radio-group>
@@ -57,7 +57,7 @@
         <ion-input color="secondary" type="password" formControlName="passwordr"></ion-input>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
-        <ion-label>RIPETI PASSWORD</ion-label>
+        <ion-label>{{ 'PASSWORD_CONFIRM' | translate}}</ion-label>
     </ion-item>
     <ion-item position="floating" no-padding class="animated fadeInUp">
         <ion-input color="secondary" type="password" formControlName="pconfirm"></ion-input>
