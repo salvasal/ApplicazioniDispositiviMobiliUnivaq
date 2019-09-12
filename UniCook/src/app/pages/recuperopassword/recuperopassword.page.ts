@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
-import {NavController} from '@ionic/angular';
+import {AlertController, NavController} from '@ionic/angular';
 
 
 @Component({
@@ -12,9 +12,12 @@ import {NavController} from '@ionic/angular';
 export class RecuperopasswordPage implements OnInit {
   private formRecuperoPassword: FormGroup;
   private recoveryTitle: string;
+  private passwordProva: string;
+  // private utente: Utente;
   constructor(private formbuilder: FormBuilder,
               private translateService: TranslateService,
-              private navController: NavController) { }
+              private navController: NavController,
+              private alertController: AlertController) { }
 
   ngOnInit() {
     this.formRecuperoPassword = this.formbuilder.group({
@@ -33,7 +36,19 @@ export class RecuperopasswordPage implements OnInit {
  backtologin() {
     this.navController.navigateRoot('login');
  }
- onRecovery() {
+ async onRecovery() {
+      this.passwordProva = 'random01'; // prova
+      const alert = await this.alertController.create({
+         header: 'Recupero Password',
+         message: 'La tua password e: ' + '<br>' + this.passwordProva, // this.utente.password
+         buttons: [{
+             text: 'Torna alla Login',
+             handler: () => {
+                 this.navController.navigateRoot('login');
+             }
+         }]
+     });
+      await alert.present();
  }
 
 }
