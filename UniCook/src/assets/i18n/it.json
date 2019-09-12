@@ -1,11 +1,19 @@
 {
-  "LOGIN_ERROR_TITLE": "Errore Login",
-  "LOGIN_ERROR_SUB_TITLE": "Username e/o password errate!",
   "USERNAME_REQUIRED": "Username obbligatorio",
   "PASSWORD_REQUIRED": "Password obbligatorio",
   "LOGIN_BUTTON": "Accedi",
-  "LOGIN_ERROR_SUB_TEXT_TITLE": "Uno dei due campi non è stato riempito",
   "RECOVERY_BUTTON": "Recupera Password",
+  "LOGIN_ERROR_TITLE": "Errore Login",
+  "LOGIN_ERROR_SUB_TITLE": "Username e/o password errate!",
+  "LOGIN_ERROR_SUB_TEXT_TITLE": "Uno dei due campi non è stato riempito",
+
+  "SIGN_IN_NAME": "NOME",
+  "SIGN_IN_SURNAME": "COGNOME",
+  "SIGN_IN_DATE": "DATA DI NASCITA",
+  "SIGN_IN_SEX": "SESSO",
+  "SIGN_IN_MALE": "Uomo",
+  "SIGN_IN_FAMALE": "Donna",
+  "PASSWORD_CONFIRM": "RIPETI PASSWORD",
   "REGISTER_BUTTON": "Registrati",
   "REGISTER_ERROR_SUB_TITLE": "Uno dei campi non è stato riempito",
   "NAME_REQUIRED": "Nome obbligatorio",
@@ -13,14 +21,35 @@
   "DATE_REQUIRED": "Data obbligatoria",
   "DONE_TEXT": "FATTO",
   "CANCEL_TEXT": "ANNULLA",
+
   "CATEGORIE_TAB": "CATEGORIE",
   "INGREDIENTI_TAB": "INGREDIENTI",
   "LISTAPREFERITI_TAB": "LISTA PREFERITI",
+
+  "RECOVERY_KEY": "CHIAVE DI RECUPERO",
   "RECOVERY_ERROR_TITLE": "Username e/o chiave di recupero errate!",
   "CHIAVERECUPERO_REQUIRED":"Chiave di recupero obbligatoria!",
   "CHIAVERECUPERO_BUTTON": "Recupera",
+
   "FILTERS": "Filtri",
+
   "SEARCH_BUTTON": "Cerca Ricetta",
+
+  "CREATE_RECIPE": "Crea la tua ricetta",
+  "TITLE": "Titolo *",
+  "DESCRIPTION": "Breve Descrizione *",
+  "DIFFICULT": "Difficoltà",
+  "TIME": "Tempo",
+  "CATEGORY": "Categoria",
+  "PEOPLE_NUMBER": "Num.Persone",
+  "LIST_INGREDIENTS": "Lista Ingredienti *",
+  "PREPARATION": "Preparazione *",
+  "IMG_INSERT": "Inserisci un'immagine (min. 1 - max. 3)",
+  "TITLE_REQUIRED": "Inserire un titolo!",
+  "DESCRIPTION_REQUIRED": "Inserire una descrizione!",
+  "INGREDIENTS_LIST_REQUIRED": "Inserire la lista degli ingredienti!",
+  "PREPARATION_REQUIRED": "Inserire la preparazione!",
   "CREATE_BUTTON": "Pubblica",
+
   "COMMENT": "Valuta"
 }
