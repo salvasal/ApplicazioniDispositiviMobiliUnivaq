@@ -54,5 +54,9 @@
   "PREPARATION_REQUIRED": "Inserire la preparazione!",
   "CREATE_BUTTON": "Pubblica",
 
-  "COMMENT": "Valuta"
+  "COMMENT": "Valuta",
+
+  "EVALUATE_RECIPE": "Valuta la ricetta",
+  "EVALUATE": "VALUTA",
+  "EVALUTATIONS_LIST": "Lista delle valutazioni"
 }

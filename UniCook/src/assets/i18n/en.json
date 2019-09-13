@@ -54,5 +54,9 @@
   "INGREDIENTS_LIST_REQUIRED": "Insert the ingredients list!",
   "PREPARATION_REQUIRED": "Insert preparation!",
 
-  "COMMENT": "Comment"
+  "COMMENT": "Comment",
+
+  "EVALUATE_RECIPE": "Evaluate the recipe",
+  "EVALUATE": "EVALUTE",
+  "EVALUTATIONS_LIST": "Evalutations list"
 }
