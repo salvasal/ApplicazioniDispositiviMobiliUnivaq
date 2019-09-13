@@ -33,6 +33,9 @@
 
   "FILTERS": "Filters",
 
+  "UNSELECTABLE_INGREDIENT": "Unselectable ingredient",
+  "SELECTABLE_INGREDIENT": "Ingredient",
+  "SELECT_INGREDIENTS": "Select ingredients",
   "SEARCH_BUTTON": "Look for recipe",
 
   "CREATE_BUTTON": "Create",
