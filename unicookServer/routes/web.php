@@ -39,4 +39,16 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
     $router->delete('categorie/{id}', ['uses' => 'CategoriaController@delete']);
   
     $router->put('categorie/{id}', ['uses' => 'CategoriaController@update']);
+
+    //API per l'Immagine
+
+    $router->get('immagini',  ['uses' => 'ImmagineController@showAllImmagini']);
+  
+    $router->get('immagini/{id}', ['uses' => 'ImmagineController@showOneImmagine']);
+  
+    $router->post('immagini', ['uses' => 'ImmagineController@create']);
+  
+    $router->delete('immagini/{id}', ['uses' => 'ImmagineController@delete']);
+  
+    $router->put('immagini/{id}', ['uses' => 'ImmagineController@update']);
   });
