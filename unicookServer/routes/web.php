@@ -16,6 +16,8 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api/v1'], function () use ($router) {
+    //API per l'utente
+
     $router->get('utenti',  ['uses' => 'UtenteController@showAllUtenti']);
   
     $router->get('utenti/{id}', ['uses' => 'UtenteController@showOneUtente']);
@@ -25,4 +27,16 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
     $router->delete('utenti/{id}', ['uses' => 'UtenteController@delete']);
   
     $router->put('utenti/{id}', ['uses' => 'UtenteController@update']);
+
+    //API per la Categoria
+
+    $router->get('categorie',  ['uses' => 'CategoriaController@showAllCategorie']);
+  
+    $router->get('categorie/{id}', ['uses' => 'CategoriaController@showOneCategoria']);
+  
+    $router->post('categorie', ['uses' => 'CategoriaController@create']);
+  
+    $router->delete('categorie/{id}', ['uses' => 'CategoriaController@delete']);
+  
+    $router->put('categorie/{id}', ['uses' => 'CategoriaController@update']);
   });
