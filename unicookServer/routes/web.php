@@ -51,4 +51,16 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
     $router->delete('immagini/{id}', ['uses' => 'ImmagineController@delete']);
   
     $router->put('immagini/{id}', ['uses' => 'ImmagineController@update']);
+
+    //API per l'Ingrediente
+
+    $router->get('ingredienti',  ['uses' => 'IngredienteController@showAllIngredienti']);
+  
+    $router->get('ingredienti/{id}', ['uses' => 'IngredienteController@showOneIngrediente']);
+  
+    $router->post('ingredienti', ['uses' => 'IngredienteController@create']);
+  
+    $router->delete('ingredienti/{id}', ['uses' => 'IngredienteController@delete']);
+  
+    $router->put('ingredienti/{id}', ['uses' => 'IngredienteController@update']);
   });
