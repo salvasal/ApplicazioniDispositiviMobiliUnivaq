@@ -63,4 +63,17 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
     $router->delete('ingredienti/{id}', ['uses' => 'IngredienteController@delete']);
   
     $router->put('ingredienti/{id}', ['uses' => 'IngredienteController@update']);
+
+    //API per la ricetta
+
+    $router->get('ricette',  ['uses' => 'RicettaController@showAllRicette']);
+  
+    $router->get('ricette/{id}', ['uses' => 'RicettaController@showOneRicetta']);
+  
+    $router->post('ricette', ['uses' => 'RicettaController@create']);
+  
+    $router->delete('ricette/{id}', ['uses' => 'RicettaController@delete']);
+  
+    $router->put('ricette/{id}', ['uses' => 'RicettaController@update']);
+
   });
