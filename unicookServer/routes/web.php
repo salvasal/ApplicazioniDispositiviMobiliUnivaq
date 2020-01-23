@@ -76,4 +76,15 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
   
     $router->put('ricette/{id}', ['uses' => 'RicettaController@update']);
 
+    //API per preferito
+
+    $router->get('me/preferiti',  ['uses' => 'PreferitoController@showAllPreferiti']);
+  
+    $router->get('me/preferiti/{id}', ['uses' => 'PreferitoController@showOnePreferito']);
+  
+    $router->post('me/preferiti', ['uses' => 'PreferitoController@create']);
+  
+    $router->delete('me/preferiti/{id}', ['uses' => 'PreferitoController@delete']);
+  
+    $router->put('me/preferiti/{id}', ['uses' => 'PreferitoController@update']);
   });
