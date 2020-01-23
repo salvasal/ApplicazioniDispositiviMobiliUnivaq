@@ -99,4 +99,16 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
     $router->delete('me/pubblicazioni/{id}', ['uses' => 'PubblicazioneController@delete']);
   
     $router->put('me/pubblicazioni/{id}', ['uses' => 'PubblicazioneController@update']);
+
+    //API per valutazione
+
+    $router->get('valutazioni',  ['uses' => 'ValutazioneController@showAllValutazioni']);
+  
+    $router->get('valutazioni/{id}', ['uses' => 'ValutazioneController@showOneValutazione']);
+  
+    $router->post('valutazioni', ['uses' => 'ValutazioneController@create']);
+  
+    $router->delete('valutazioni/{id}', ['uses' => 'ValutazioneController@delete']);
+  
+    $router->put('valutazioni/{id}', ['uses' => 'ValutazioneController@update']);
   });
