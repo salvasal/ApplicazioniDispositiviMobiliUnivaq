@@ -87,4 +87,16 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
     $router->delete('me/preferiti/{id}', ['uses' => 'PreferitoController@delete']);
   
     $router->put('me/preferiti/{id}', ['uses' => 'PreferitoController@update']);
+
+    //API per pubblicazione
+
+    $router->get('me/pubblicazioni',  ['uses' => 'PubblicazioneController@showAllPubblicazioni']);
+  
+    $router->get('me/pubblicazioni/{id}', ['uses' => 'PubblicazioneController@showOnePubblicazione']);
+  
+    $router->post('me/pubblicazioni', ['uses' => 'PubblicazioneController@create']);
+  
+    $router->delete('me/pubblicazioni/{id}', ['uses' => 'PubblicazioneController@delete']);
+  
+    $router->put('me/pubblicazioni/{id}', ['uses' => 'PubblicazioneController@update']);
   });
