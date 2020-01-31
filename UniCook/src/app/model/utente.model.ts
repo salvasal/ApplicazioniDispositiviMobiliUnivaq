@@ -5,5 +5,5 @@ export class Utente {
     nome: string;
     cognome: string;
     sesso: string;
-    datanascita: Date;
+    datanascita: string;
 }

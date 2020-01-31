@@ -3,15 +3,15 @@ import {Ingrediente} from './ingrediente.model';
 import {Immagine} from './immagine.model';
 
 export class Ricetta {
-    idricetta: string;
+    idRicetta: number;
     nomericetta: string;
     descrizione: string;
     preparazione: string;
     tempocottura: string;
     difficolta: string;
     categoria: Categoria;
-    ingredienti: Array<Ingrediente>;
-    immagini: Array<Immagine>;
+    ingredienti: Ingrediente[];
+    immagini: Immagine[];
 }
 
 // difficolta

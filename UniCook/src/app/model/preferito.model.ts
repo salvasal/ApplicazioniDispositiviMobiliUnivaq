@@ -2,8 +2,8 @@ import {Utente} from './utente.model';
 import {Ricetta} from './ricetta.model';
 
 export class Preferito {
-    idpreferito: string;
-    data: Date;
+    idPreferito: number;
+    data: string;
     utente: Utente;
     ricetta: Ricetta;
 }

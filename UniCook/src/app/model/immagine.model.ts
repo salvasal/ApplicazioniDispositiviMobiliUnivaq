@@ -1,4 +1,4 @@
 export class Immagine {
-    idimmagine: string;
+    idImmagine: number;
     imageframe: string;
 }

@@ -1,11 +1,10 @@
-import {Time} from '@angular/common';
 import {Utente} from './utente.model';
 import {Ricetta} from './ricetta.model';
 
 export class Pubblicazione {
-    idpubblicazione: string;
-    data: Date;
-    ora: Time;
+    idPubblicazione: number;
+    data: string;
+    ora: string;
     utente: Utente;
     ricetta: Ricetta;
 }

@@ -1,4 +1,4 @@
 export class Ingrediente {
-    idingrediente: string;
+    idIngrediente: number;
     nome: string;
 }
