@@ -13,5 +13,6 @@ export const USE_PROXY = true;
 export const URL_BASE = USE_PROXY ? 'api/v1' : 'http://localhost:8000/unicookServer/api/v1';
 
 export const URL = {
-    LOGIN: URL_BASE + '/login'
+    LOGIN: URL_BASE + '/login',
+    REGISTER: URL_BASE + '/utenti'
 };

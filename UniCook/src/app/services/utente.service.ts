@@ -74,4 +74,7 @@ export class UtenteService {
         return this.loggedIn$.asObservable();
     }
 
+    register(utente: Utente): Observable<Utente> {
+        return this.http.post<Utente>(URL.REGISTER, utente);
+    }
 }
