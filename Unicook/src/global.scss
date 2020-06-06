@@ -24,3 +24,21 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.logo {
+  width: 150px;
+  height: 200px;
+  margin: 20px auto 8px;
+  border-radius: 10%;
+  background: url("/assets/images/Logo.png") no-repeat;
+  background-size: 100%;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fonts/Lato-Regular.ttf');
+}
+
+* {
+  font-family: 'Lato';
+}
