@@ -42,3 +42,88 @@
 * {
   font-family: 'Lato';
 }
+
+.bg-light {
+  background-color: var(--ion-color-light);
+}
+
+.bg-primary {
+  background-color: var(--ion-color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--ion-color-secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--ion-color-tertiary);
+}
+
+.bg-success {
+  background-color:  var(--ion-color-success);
+}
+
+.bg-success-tint {
+  background-color: var(--ion-color-success-tint);
+}
+
+.bg-warning {
+  background-color: var(--ion-color-warning);
+}
+
+.bg-danger {
+  background-color: var(--ion-color-danger);
+}
+
+.bg-dark {
+  background-color: var(--ion-color-dark);
+}
+
+.bg-medium {
+  background-color: var(--ion-color-medium);
+}
+
+ion-toolbar {
+  &.--ion-color-primary {
+    --ion-color-base: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary)) !important;
+  }
+}
+
+.text08 {
+  font-size: .8rem;
+}
+
+.title-text {
+  padding-right: 75px;
+}
+
+ion-item {
+  --ion-item-background: transparent;
+}
+
+.item.sc-ion-label-md-h, .item .sc-ion-label-md-h {
+  text-align: center;
+  color: var(--ion-color-primary-shade);
+  font-weight: bold;
+}
+
+ion-input {
+  border-color: var(--ion-color-primary);
+  margin: 20px;
+}
+
+ion-datetime {
+  margin: 5px;
+  color: var(--ion-color-primary);
+}
+
+ion-list {
+  text-decoration-color: var(--ion-color-primary);
+  --color: var(--ion-color-primary);
+  --color-checked: var(--ion-color-primary);
+}
+
+.text-color-bottom {
+  --color: var(--ion-color-primary);
+}
+
