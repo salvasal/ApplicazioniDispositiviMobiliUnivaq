@@ -1,4 +1,5 @@
 export class Utente {
+    IDutente: number;
     username: string;
     password: string;
     chiaverecupero: string;
