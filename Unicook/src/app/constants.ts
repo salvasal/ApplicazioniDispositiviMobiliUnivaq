@@ -11,7 +11,12 @@ export const URL_API = {
     // Url che permette il recupero  di una singola ricetta
     singleRicetta(id: number): string {
         return URL_BASE + '/ricette/' + id;
-    }
+    },
+    // Url della login
+    LOGIN: URL_BASE + '/login',
+    LOGOUT: URL_BASE + '/logout',
+    allUtenti: URL_BASE + '/utenti/',
+    insertUtente: URL_BASE + '/utenti/'
 };
 
 export const X_AUTH = 'X-Auth';

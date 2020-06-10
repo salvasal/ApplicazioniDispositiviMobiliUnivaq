@@ -6,8 +6,12 @@
       <!-- Titolo della App UniCook -->
       <ion-title color="light" class="ion-text-right title-text">UniCook</ion-title>
       <!-- Bottone Login per passare alla Page Login -->
-      <ion-button size="small" expand="block" color="light" class="text-color-bottom">
+      <ion-button *ngIf="!isLogged" size="small" expand="block" color="light" class="text-color-bottom">
         {{ 'LOGIN_HEADER' | translate }}
+      </ion-button>
+      <!-- Bottone Logout presente nel caso in cui l'utente è loggato -->
+      <ion-button *ngIf="isLogged" size="small" expand="block" color="light" class="text-color-bottom" (click)="logout()">
+        {{ 'LOGOUT_HEADER' | translate }}
       </ion-button>
     </ion-item>
   </ion-toolbar>
