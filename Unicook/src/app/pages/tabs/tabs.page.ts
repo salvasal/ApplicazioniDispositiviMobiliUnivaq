@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -12,10 +13,15 @@ export class TabsPage implements OnInit {
   private ingredientiTab: string;
   private listaPreferitiTab: string;
 
-  constructor(private translateService: TranslateService) { }
+  constructor(private translateService: TranslateService,
+              private router: Router) { }
 
   ngOnInit() {
     this.initTranslate();
+  }
+
+  goToListaRicette() {
+    this.router.navigate(['/tabs/listaricette']);
   }
 
   private initTranslate() {
