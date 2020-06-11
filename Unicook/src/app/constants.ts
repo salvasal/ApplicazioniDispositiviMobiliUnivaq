@@ -16,7 +16,17 @@ export const URL_API = {
     LOGIN: URL_BASE + '/login',
     LOGOUT: URL_BASE + '/logout',
     allUtenti: URL_BASE + '/utenti/',
-    insertUtente: URL_BASE + '/utenti/'
+    insertUtente: URL_BASE + '/utenti/',
+    allValutazioni: URL_BASE + '/valutazioni/',
+    insertValutazione: URL_BASE + '/valutazioni/',
+    singleValutazione(id: number): string {
+        return URL_BASE + '/valutazioni/' + id;
+    },
+    allCategorie: URL_BASE + '/categorie/',
+    insertCategoria: URL_BASE + '/categorie/',
+    singleCategoria(id: number): string {
+        return URL_BASE + '/categorie/' + id;
+    }
 };
 
 export const X_AUTH = 'X-Auth';
