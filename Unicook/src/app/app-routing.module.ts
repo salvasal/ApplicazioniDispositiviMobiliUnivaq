@@ -11,6 +11,18 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registrazione',
+    loadChildren: () => import('./pages/registrazione/registrazione.module').then( m => m.RegistrazionePageModule)
+  },
+  {
+    path: 'recuperopassword',
+    loadChildren: () => import('./pages/recuperopassword/recuperopassword.module').then( m => m.RecuperopasswordPageModule)
+  },
 ];
 
 @NgModule({

@@ -9,10 +9,6 @@ import {UtenteService} from '../../services/utente.service';
   styleUrls: ['./tabs.page.scss'],
 })
 export class TabsPage implements OnInit {
-  private loginHeader: string;
-  private categorieTab: string;
-  private ingredientiTab: string;
-  private listaPreferitiTab: string;
   isLogged = false;
 
   constructor(private translateService: TranslateService,
@@ -20,8 +16,6 @@ export class TabsPage implements OnInit {
               private utenteService: UtenteService) { }
 
   ngOnInit() {
-    this.initTranslate();
-
     this.utenteService.isLogged().subscribe(result => {
       this.isLogged = result;
     }, error => {
@@ -33,23 +27,12 @@ export class TabsPage implements OnInit {
     this.router.navigate(['/tabs/listaricette']);
   }
 
-  logout() {
-    this.utenteService.logout();
+  goToLogin() {
+    this.router.navigate(['login']);
   }
 
-  private initTranslate() {
-    this.translateService.get('LOGIN_HEADER').subscribe((data) => {
-      this.loginHeader = data;
-    });
-    this.translateService.get('CATEGORIE_TAB').subscribe((data) => {
-      this.categorieTab = data;
-    });
-    this.translateService.get('INGREDIENTI_TAB').subscribe((data) => {
-      this.ingredientiTab = data;
-    });
-    this.translateService.get('LISTAPREFERITI_TAB').subscribe((data) => {
-      this.listaPreferitiTab = data;
-    });
+  logout() {
+    this.utenteService.logout();
   }
 
 }
