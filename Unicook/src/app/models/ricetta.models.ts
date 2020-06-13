@@ -1,6 +1,6 @@
 import {Categoria} from './categoria.models';
 import {Ingrediente} from './ingrediente.models';
-import {Immagine} from './immagine.models';
+import {Photo} from './immagine.models';
 import {Utente} from './utente.models';
 
 export class Ricetta {
@@ -14,7 +14,7 @@ export class Ricetta {
     ora: string;
     categoria: Categoria;
     ingredienti: Ingrediente[];
-    immagini: Immagine[];
+    immagini: Photo[];
     utente: Utente;
 
 }

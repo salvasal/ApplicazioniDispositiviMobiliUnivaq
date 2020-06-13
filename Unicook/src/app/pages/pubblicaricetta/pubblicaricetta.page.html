@@ -6,12 +6,16 @@
       <!-- Titolo della App UniCook -->
       <ion-title color="light" class="ion-text-center">UniCook</ion-title>
       <!-- Icona inerente al reset della form della creazione ricetta  -->
-      <ion-icon name="trash-outline" class="ion-float-right" color="light" (click)="creaFormModel.reset()"></ion-icon>
+      <ion-icon name="trash-outline" class="ion-float-right" color="light" (click)="resetForm()"></ion-icon>
     </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true">
+  <ion-item>
+    <ion-label class="ion-text-start">{{ 'CREA' | translate}}</ion-label>
+  </ion-item>
+
   <!-- Form Creazione della ricetta -->
   <form [formGroup]="creaFormModel" class="list-form">
     <!-- Titolo della ricetta -->
@@ -33,13 +37,72 @@
     <!-- Difficoltà della ricetta -->
     <ion-item>
       <ion-label class="ion-text-start">{{ 'DIFFICOLTA' | translate}}</ion-label>
-      <ion-select class="select-test" formControlName="difficolta">
+      <ion-select interface="action-sheet" class="select-test" formControlName="difficolta">
         <ion-select-option *ngFor="let element of difficolta" [value]="element">{{ element }}</ion-select-option>
       </ion-select>
     </ion-item>
     <p ion-text class="text08" *ngIf="creaFormModel.get('difficolta').touched && creaFormModel.get('difficolta').invalid">
       <ion-text color="success" class="ion-margin-start"> {{ 'DIFFICOLTA_REQUIRED' | translate }} </ion-text>
     </p>
+    <!-- Tempo di cottura della ricetta -->
+    <ion-item>
+      <ion-label class="ion-text-start">{{ 'TEMPOCOTTURA' | translate}}</ion-label>
+      <ion-select interface="action-sheet" class="select-test" formControlName="tempocottura">
+        <ion-select-option *ngFor="let element of tempocottura" [value]="element">{{ element }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="creaFormModel.get('tempocottura').touched && creaFormModel.get('tempocottura').invalid">
+      <ion-text color="success" class="ion-margin-start"> {{ 'TEMPOCOTTURA_REQUIRED' | translate }} </ion-text>
+    </p>
+    <!-- Categoria in cui appartiene la ricetta -->
+    <ion-item>
+      <ion-label class="ion-text-start">{{ 'CATEGORIA' | translate}}</ion-label>
+      <ion-select interface="action-sheet" class="select-test" formControlName="categoria">
+        <ion-select-option *ngFor="let element of categorie" [value]="element">{{ element.nome }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="creaFormModel.get('categoria').touched && creaFormModel.get('categoria').invalid">
+      <ion-text color="success" class="ion-margin-start"> {{ 'CATEGORIA_REQUIRED' | translate }} </ion-text>
+    </p>
+    <!-- Ingredienti della ricetta -->
+    <ion-item>
+      <ion-label class="ion-text-start">{{ 'INGREDIENTI' | translate}}</ion-label>
+      <ion-select multiple="true" class="select-test" formControlName="ingredienti">
+        <ion-select-option *ngFor="let element of ingredienti" [value]="element">{{ element.nome }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="creaFormModel.get('ingredienti').touched && creaFormModel.get('ingredienti').invalid">
+      <ion-text color="success" class="ion-margin-start"> {{ 'INGREDIENTI_REQUIRED' | translate }} </ion-text>
+    </p>
+    <!-- Preparazione della ricetta -->
+    <ion-item>
+      <ion-label class="ion-text-start">{{ 'PREPARAZIONE' | translate}}</ion-label>
+      <ion-textarea color="secondary" type="text" rows="20" maxlength="2000" formControlName="preparazione"></ion-textarea>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="creaFormModel.get('preparazione').touched && creaFormModel.get('preparazione').invalid">
+      <ion-text color="success" class="ion-margin-start"> {{ 'PREPARAZIONE_REQUIRED' | translate }} </ion-text>
+    </p>
+    <!-- Griglia che mostra le foto scattate -->
+    <ion-grid class="ion-grid-width-sm">
+      <ion-row>
+        <ion-col class="grid" *ngFor="let photo of photoService.photos">
+          <ion-img src="{{ photo.webviewPath }}"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- Bottone per pubblicare una ricetta -->
+    <div margin-top="20px">
+      <ion-button size="medium" expand="block" class="ion-margin-start ion-margin-end" color="primary" [disabled]="!creaFormModel.valid" tappable="true" (click)="onSubmit()">
+        {{ 'SUBMIT_BUTTON' | translate}}
+      </ion-button>
+    </div>
+
   </form>
 
+    <!-- Serve per aggiugere una foto -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="photoService.addNewToGallery()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 </ion-content>

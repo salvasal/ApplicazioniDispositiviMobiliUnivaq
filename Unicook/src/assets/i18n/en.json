@@ -14,10 +14,20 @@
   "LOGIN_BUTTON": "LOGIN",
   "LOGIN_ERROR_TITLE": "Login error",
   "LOGIN_ERROR_SUB_TITLE": "Username and/or password Wrong!",
+  "CREA": "Create your recipe",
   "NOMERICETTA": "Title",
   "NOMERICETTA_REQUIRED": "Title required",
   "DESCRIZIONE": "Description",
   "DESCRIZIONE_REQUIRED": "Description required",
   "DIFFICOLTA": "Difficulty",
-  "DIFFICOLTA_REQUIRED": "Difficulty required"
+  "DIFFICOLTA_REQUIRED": "Difficulty required",
+  "TEMPOCOTTURA": "Cooking Time",
+  "TEMPOCOTTURA_REQUIRED": "Cooking Time required",
+  "CATEGORIA": "Category",
+  "CATEGORIA_REQUIRED": "Category required",
+  "INGREDIENTI": "Ingredients",
+  "INGREDIENTI_REQUIRED": "Ingredients required",
+  "PREPARAZIONE": "Preparation",
+  "PREPARAZIONE_REQUIRED": "Preparation required",
+  "SUBMIT_BUTTON": "PUBLISH"
 }

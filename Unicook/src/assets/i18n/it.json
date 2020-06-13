@@ -14,10 +14,20 @@
   "LOGIN_BUTTON": "LOGIN",
   "LOGIN_ERROR_TITLE": "Errore Login",
   "LOGIN_ERROR_SUB_TITLE": "Username e/o password errate!",
+  "CREA": "Crea la tua ricetta",
   "NOMERICETTA": "Titolo",
   "NOMERICETTA_REQUIRED": "Titolo obbligatorio",
   "DESCRIZIONE": "Descrizione",
   "DESCRIZIONE_REQUIRED": "Descrizione obbligatoria",
   "DIFFICOLTA": "Difficoltà",
-  "DIFFICOLTA_REQUIRED": "Difficoltà obbligatoria"
+  "DIFFICOLTA_REQUIRED": "Difficoltà obbligatoria",
+  "TEMPOCOTTURA": "Tempo di cottura",
+  "TEMPOCOTTURA_REQUIRED": "Tempo di cottura obbligatoria",
+  "CATEGORIA": "Categoria",
+  "CATEGORIA_REQUIRED": "Categoria obbligatoria",
+  "INGREDIENTI": "Ingredienti",
+  "INGREDIENTI_REQUIRED": "Ingredienti obbligatori",
+  "PREPARAZIONE": "Preparazione",
+  "PREPARAZIONE_REQUIRED": "Preparazione obbligatorio",
+  "SUBMIT_BUTTON": "PUBBLICA"
 }

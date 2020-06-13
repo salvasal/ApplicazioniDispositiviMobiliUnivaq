@@ -1,5 +1,5 @@
-export class Immagine {
-    IDimmagine: number;
-    name: string;
-    imageframe: string;
+export class Photo {
+    filepath: string;
+    webviewPath: string;
+    base64?: string;
 }
