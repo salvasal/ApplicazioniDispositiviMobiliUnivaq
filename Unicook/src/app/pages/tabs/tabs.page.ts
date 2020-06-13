@@ -31,6 +31,10 @@ export class TabsPage implements OnInit {
     this.router.navigate(['login']);
   }
 
+  goToPubblicaRicetta() {
+    this.router.navigate(['pubblicaricetta']);
+  }
+
   logout() {
     this.utenteService.logout();
   }

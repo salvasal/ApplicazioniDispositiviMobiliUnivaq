@@ -13,5 +13,11 @@
   "PASSWORD": "PASSWORD",
   "LOGIN_BUTTON": "LOGIN",
   "LOGIN_ERROR_TITLE": "Login error",
-  "LOGIN_ERROR_SUB_TITLE": "Username and/or password Wrong!"
+  "LOGIN_ERROR_SUB_TITLE": "Username and/or password Wrong!",
+  "NOMERICETTA": "Title",
+  "NOMERICETTA_REQUIRED": "Title required",
+  "DESCRIZIONE": "Description",
+  "DESCRIZIONE_REQUIRED": "Description required",
+  "DIFFICOLTA": "Difficulty",
+  "DIFFICOLTA_REQUIRED": "Difficulty required"
 }

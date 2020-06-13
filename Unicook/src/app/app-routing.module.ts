@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'recuperopassword',
     loadChildren: () => import('./pages/recuperopassword/recuperopassword.module').then( m => m.RecuperopasswordPageModule)
+  },  {
+    path: 'pubblicaricetta',
+    loadChildren: () => import('./pages/pubblicaricetta/pubblicaricetta.module').then( m => m.PubblicaricettaPageModule)
   },
+
 ];
 
 @NgModule({

@@ -127,3 +127,30 @@ ion-list {
   --color: var(--ion-color-primary);
 }
 
+ion-select-option {
+  --ion-text-color: var(--ion-color-secondary) !important;
+}
+
+ion-alert.select-alert {
+  --background: var(--ion-color-light) !important;
+  --ion-text-color: var(--ion-color-secondary) !important;
+
+  button {
+    color: var(--ion-color-secondary) !important;
+    font-size: 20px !important;
+  }
+
+  .sc-ion-alert-md {
+    color: var(--ion-color-secondary) !important;
+  }
+}
+
+.select-test {
+  color: var(--ion-color-secondary) !important;
+}
+
+.fab {
+  padding-bottom: 50px;
+  padding-right: auto;
+}
+

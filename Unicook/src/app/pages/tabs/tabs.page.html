@@ -18,6 +18,16 @@
 </ion-header>
 
 <ion-content>
+  <!-- Bottone per accedere alla page della creazione di una ricetta -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <div class="fab">
+      <ion-fab-button color="primary" (click)="goToPubblicaRicetta()">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </ion-fab-button>
+    </div>
+  </ion-fab>
+
+  <!-- Tabs per passare alla lista categoria, ingredienti e preferiti -->
   <ion-tabs>
     <ion-tab-bar slot="bottom" color="primary">
       <ion-tab-button tab="categorie">
@@ -34,4 +44,5 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
+
 </ion-content>
