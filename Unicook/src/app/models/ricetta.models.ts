@@ -1,6 +1,6 @@
 import {Categoria} from './categoria.models';
 import {Ingrediente} from './ingrediente.models';
-import {Photo} from './immagine.models';
+import {Photo} from './photo.models';
 import {Utente} from './utente.models';
 
 export class Ricetta {
