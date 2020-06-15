@@ -17,11 +17,11 @@ export class CategoriaService {
     // return this.http.get<Categoria[]>(URL_API.allCategorie);
 
     // tslint:disable-next-line:label-position
-    this.categorie = [{ IDcategoria: 0, nome: 'Antipasto' },
-      { IDcategoria: 1, nome: 'Primo' },
-      { IDcategoria: 2, nome: 'Secondo' },
-      { IDcategoria: 3, nome: 'Contorno' },
-      { IDcategoria: 4, nome: 'Dolce'} ];
+    this.categorie = [{ IDcategoria: 0, nome: 'Antipasti' },
+      { IDcategoria: 1, nome: 'Primi Piatti' },
+      { IDcategoria: 2, nome: 'Secondi Piatti' },
+      { IDcategoria: 3, nome: 'Contorni' },
+      { IDcategoria: 4, nome: 'Dolci'} ];
     return of(this.categorie);
   }
 

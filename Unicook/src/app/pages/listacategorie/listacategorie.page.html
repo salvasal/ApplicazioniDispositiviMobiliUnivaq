@@ -1,9 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>listacategorie</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-item lines="none" class="text-color-bottom">{{ 'CATEGORIA_TITLE' | translate }}</ion-item>
+    <ion-list>
+      <ion-card class="bg-secondary" *ngFor="let categoria of categorie">
+        <ion-item button="true">
+            <ion-label style="text-align: center">
+              <ion-text color="light">
+                {{ categoria.nome }}
+              </ion-text>
+            </ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-list>
 </ion-content>

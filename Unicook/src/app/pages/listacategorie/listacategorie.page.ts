@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Categoria} from '../../models/categoria.models';
+import {CategoriaService} from '../../services/categoria.service';
 
 @Component({
   selector: 'app-listacategorie',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listacategorie.page.scss'],
 })
 export class ListacategoriePage implements OnInit {
+  categorie: Categoria[] = [];
 
-  constructor() { }
+  constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit() {
+    this.categoriaService.getAll().subscribe(result => {
+      this.categorie = result;
+      // tslint:disable-next-line:no-shadowed-variable
+    }, error => {
+      console.log(error);
+    });
   }
 
 }
