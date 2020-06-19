@@ -23,12 +23,12 @@ export const URL_API = {
     },
     // Url di preferite
     // Url che recupera tutte le ricette preferite
-    allPreferite: URL_BASE + '/preferite/',
+    allPreferiti: URL_BASE + '/preferiti/',
     // Url per insert nuova ricetta preferita
-    insertPreferita: URL_BASE + '/preferite/',
+    insertPreferito: URL_BASE + '/preferiti/',
     // Url per recuperare una singola ricetta preferita
-    singlePreferita(id: number): string {
-        return URL_BASE + '/preferite/' + id;
+    singlePreferito(id: number): string {
+        return URL_BASE + '/preferiti/' + id;
     },
     // Url della login
     LOGIN: URL_BASE + '/login',
