@@ -12,6 +12,24 @@ export const URL_API = {
     singleRicetta(id: number): string {
         return URL_BASE + '/ricette/' + id;
     },
+    // Url di ingredienti
+    // Url che recupera tutti gli ingredienti
+    allIngredienti: URL_BASE + '/ingredienti/',
+    // Url per insert del nuovo ingrediente
+    insertIngrediente: URL_BASE + '/ingredienti/',
+    // Url per recuperare singolo ingrediente
+    singleIngrediente(id: number): string {
+        return URL_BASE + '/ingredienti/' + id;
+    },
+    // Url di preferite
+    // Url che recupera tutte le ricette preferite
+    allPreferite: URL_BASE + '/preferite/',
+    // Url per insert nuova ricetta preferita
+    insertPreferita: URL_BASE + '/preferite/',
+    // Url per recuperare una singola ricetta preferita
+    singlePreferita(id: number): string {
+        return URL_BASE + '/preferite/' + id;
+    },
     // Url della login
     LOGIN: URL_BASE + '/login',
     LOGOUT: URL_BASE + '/logout',
