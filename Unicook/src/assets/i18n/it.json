@@ -34,5 +34,11 @@
   "PREPARAZIONE": "Preparazione",
   "PREPARAZIONE_REQUIRED": "Preparazione obbligatorio",
   "SUBMIT_BUTTON": "PUBBLICA",
-  "CATEGORIA_TITLE": "SELEZIONA UNA CATEGORIA"
+  "CATEGORIA_TITLE": "SELEZIONA UNA CATEGORIA",
+  "RECOVERY_ERROR_TITLE": "Errore Recupera Password",
+  "RECOVERY_ERROR_SUB_TITLE": "Username e/o chiave di recupero errate!",
+  "RECOVERY_KEY": "CHIAVE DI RECUPERO",
+  "RECOVERY_KEY_REQUIRED": "Chiave di recupero obbligatoria",
+  "RECOVERY_BUTTON": "RECUPERA PASSWORD",
+  "RECOVERY_PASSWORD": "La tua password e': "
 }

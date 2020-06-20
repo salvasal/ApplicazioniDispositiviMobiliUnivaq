@@ -34,5 +34,12 @@
   "PREPARAZIONE": "Preparation",
   "PREPARAZIONE_REQUIRED": "Preparation required",
   "SUBMIT_BUTTON": "PUBLISH",
-  "CATEGORIA_TITLE": "SELECT CATEGORY"
+  "CATEGORIA_TITLE": "SELECT CATEGORY",
+  "RECOVERY_ERROR_TITLE": "Error Password Recovery",
+  "RECOVERY_ERROR_SUB_TITLE": "Username and/or recovery key Wrong!",
+  "RECOVERY_KEY": "RECOVERY KEY",
+  "RECOVERY_KEY_REQUIRED": "Recovery key required",
+  "RECOVERY_BUTTON": "PASSWORD RECOVERY",
+  "RECOVERY_PASSWORD": "Your password is: "
+
 }

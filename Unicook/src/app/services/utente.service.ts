@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
+import {BehaviorSubject, Observable, of} from 'rxjs';
 import {Utente} from '../models/utente.models';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Storage} from '@ionic/storage';
@@ -11,6 +11,7 @@ export interface Account {
   password: string;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,6 +19,8 @@ export class UtenteService {
   private authToken: string;
   private loggedIn$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   private utente$: BehaviorSubject<Utente> = new BehaviorSubject<Utente>({} as Utente);
+
+  utenteList: Utente[] = [];
 
   constructor(private http: HttpClient,
               private storage: Storage) {
@@ -73,7 +76,28 @@ export class UtenteService {
 
   // Metodo che verrà utilizzata nella logica del recupero delle credenziali
   getAll(): Observable<Utente[]> {
-    return this.http.get<Utente[]>(URL_API.allUtenti);
+    // return this.http.get<Utente[]>(URL_API.allUtenti);
+
+    this.utenteList = [{
+      IDutente: 0,
+      username: 'lorsalvi',
+      password: 'ciao',
+      chiaverecupero: 'chiave1',
+      nome: '',
+      cognome: '',
+      sesso: '',
+      datanascita: ''
+    }, {
+      IDutente: 1,
+      username: 'salvasal',
+      password: 'romeo',
+      chiaverecupero: 'chiave2',
+      nome: '',
+      cognome: '',
+      sesso: '',
+      datanascita: ''
+    } ];
+    return of(this.utenteList);
   }
 
   // Metodo che verrà utilizzato per la creazione di un nuovo utente
