@@ -9,6 +9,8 @@ import {URL_API} from '../constants';
 })
 export class RicettaService {
 
+  private listaRicetta: Ricetta[] = [];
+
   constructor(private http: HttpClient) { }
 
   // Metodo che permette di recuperare tutte le ricette
