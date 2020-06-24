@@ -12,14 +12,14 @@
           <ion-col size="4">
             <ion-img src="{{ element.immagini[0].webviewPath }}"></ion-img>
           </ion-col>
-        <ion-col>
+        <ion-col size="8">
       <!-- testo ricetta -->
-          <ion-label>
-          <!-- le informazioni sono passate nei tag sottostanti -->
-            <ion-badge color="primary">{{ element.categoria.nome }}</ion-badge>
-            <h2>{{ element.nomericetta }}</h2>
-            <span>{{ element.data }} {{ element.ora }}</span>
-          </ion-label>
+            <ion-label>
+            <!-- le informazioni sono passate nei tag sottostanti -->
+              <p class="title-ricetta">{{ element.nomericetta }}</p>
+              <ion-badge color="primary">{{ element.categoria.nome }}</ion-badge>
+              <p>{{ element.data }} {{ element.ora }}</p>
+            </ion-label>
         </ion-col>
         </ion-row>
       </ion-grid>
