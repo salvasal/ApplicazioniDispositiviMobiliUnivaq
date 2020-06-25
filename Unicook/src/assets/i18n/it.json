@@ -40,5 +40,9 @@
   "RECOVERY_KEY": "CHIAVE DI RECUPERO",
   "RECOVERY_KEY_REQUIRED": "Chiave di recupero obbligatoria",
   "RECOVERY_BUTTON": "RECUPERA PASSWORD",
-  "RECOVERY_PASSWORD": "La tua password e': "
+  "RECOVERY_PASSWORD": "La tua password e': ",
+  "PREFERITO_INSERTED": "Ricetta salvata tra i preferiti",
+  "PREFERITO_INSERTED_TITLE": "PREFERITI",
+  "PREFERITO_DELETED": "Ricetta rimossa tra i preferiti",
+  "PREFERITO_DELETED_TITLE": "PREFERITI RIMOZIONE"
 }

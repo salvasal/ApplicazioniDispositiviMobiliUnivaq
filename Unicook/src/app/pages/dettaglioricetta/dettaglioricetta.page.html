@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <!-- Icona inerente alla freccia per tornare alla lista delle ricette -->
+      <ion-icon name="arrow-back-outline" class="ion-float-left" color="light" (click)="goToListaRicette()"></ion-icon>
+      <!-- Titolo della App UniCook -->
+      <ion-title color="light" class="ion-text-center">UniCook</ion-title>
+      <!-- Icona star nel caso in cui la ricetta NON è tra i preferiti -->
+      <ion-icon *ngIf="!isPreferito" class="ion-float-right" name="star" color="light" (click)="insertPreferito()"></ion-icon>
+      <!-- Icona star nel caso in cui la ricetta è tra i preferiti -->
+      <ion-icon *ngIf="isPreferito" class="ion-float-right" name="star" [style.color]="'yellow'" (click)="deletePreferito()"></ion-icon>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>

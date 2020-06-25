@@ -22,9 +22,14 @@ const routes: Routes = [
   {
     path: 'recuperopassword',
     loadChildren: () => import('./pages/recuperopassword/recuperopassword.module').then( m => m.RecuperopasswordPageModule)
-  },  {
+  },
+  {
     path: 'pubblicaricetta',
     loadChildren: () => import('./pages/pubblicaricetta/pubblicaricetta.module').then( m => m.PubblicaricettaPageModule)
+  },
+  {
+    path: 'dettaglioricetta/:id',
+    loadChildren: () => import('./pages/dettaglioricetta/dettaglioricetta.module').then( m => m.DettaglioricettaPageModule)
   },
 
 ];

@@ -40,6 +40,9 @@
   "RECOVERY_KEY": "RECOVERY KEY",
   "RECOVERY_KEY_REQUIRED": "Recovery key required",
   "RECOVERY_BUTTON": "PASSWORD RECOVERY",
-  "RECOVERY_PASSWORD": "Your password is: "
-
+  "RECOVERY_PASSWORD": "Your password is: ",
+  "PREFERITO_INSERTED": "Recipe saved as a favorite",
+  "PREFERITO_INSERTED_TITLE": "FAVORITES",
+  "PREFERITO_DELETED": "Recipe removed from favorites",
+  "PREFERITO_DELETED_TITLE": "FAVORITES REMOVAL"
 }

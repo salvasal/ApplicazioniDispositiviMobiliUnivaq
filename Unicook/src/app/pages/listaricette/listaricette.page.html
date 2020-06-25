@@ -5,7 +5,7 @@
   <ion-searchbar showCancelButton="focus" placeholder="Cerca la ricetta..." (ionChange)="getListFiltered($event)"></ion-searchbar>
 
   <ion-list>
-    <ion-item button="true" *ngFor="let element of ricetteFiltered">
+    <ion-item button="true" *ngFor="let element of ricetteFiltered" [routerLink]="['/dettaglioricetta', element.IDricetta]" routerDirection="forward">
       <!-- immagine ricetta -->
       <ion-grid class="ion-grid-width-sm">
         <ion-row>
