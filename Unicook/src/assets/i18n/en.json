@@ -44,5 +44,10 @@
   "PREFERITO_INSERTED": "Recipe saved as a favorite",
   "PREFERITO_INSERTED_TITLE": "FAVORITES",
   "PREFERITO_DELETED": "Recipe removed from favorites",
-  "PREFERITO_DELETED_TITLE": "FAVORITES REMOVAL"
+  "PREFERITO_DELETED_TITLE": "FAVORITES REMOVAL",
+  "VALUTA_BUTTON": "EVALUATE",
+  "NOME_RICETTA": "Recipe name",
+  "REALIZZATO": "Realized by",
+  "TEMPO": "Cooking time",
+  "MINUTI": "minutes"
 }

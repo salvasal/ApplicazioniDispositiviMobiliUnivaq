@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DettaglioricettaPageRoutingModule } from './dettaglioricetta-routing.module';
+import { ValutazionePageRoutingModule } from './valutazione-routing.module';
 
-import { DettaglioricettaPage } from './dettaglioricetta.page';
+import { ValutazionePage } from './valutazione.page';
 import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
@@ -14,9 +14,9 @@ import {TranslateModule} from '@ngx-translate/core';
     CommonModule,
     FormsModule,
     IonicModule,
-    TranslateModule.forChild(),
-    DettaglioricettaPageRoutingModule
+    ValutazionePageRoutingModule,
+    TranslateModule.forChild()
   ],
-  declarations: [DettaglioricettaPage]
+  declarations: [ValutazionePage]
 })
-export class DettaglioricettaPageModule {}
+export class ValutazionePageModule {}

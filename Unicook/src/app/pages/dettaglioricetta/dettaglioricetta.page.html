@@ -14,5 +14,66 @@
 </ion-header>
 
 <ion-content>
-
+  <!-- Griglia che mostra le foto scattate -->
+  <ion-grid class="ion-grid-width-sm">
+    <ion-row>
+      <ion-col *ngFor="let immagine of ricetta.immagini">
+        <ion-img src="{{ immagine.webviewPath }}"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-margin-top ion-padding-horizontal">
+        <ion-badge class="title-ricetta" color="primary">{{ ricetta.categoria.nome }}</ion-badge>
+      </ion-col>
+      <ion-col>
+        <p class="title-ricetta p-color-primary">{{ ricetta.data }} {{ ricetta.ora }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding-horizontal">
+        <p>{{ 'NOME_RICETTA' | translate }}</p>
+        <p class="title-ricetta p-color-primary">{{ ricetta.nomericetta }}</p>
+      </ion-col>
+      <ion-col class="ion-padding-horizontal">
+        <p>{{ 'REALIZZATO' | translate }}</p>
+        <p class="title-ricetta p-color-primary">{{ ricetta.utente.username }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding-horizontal">
+        <p>{{ 'DESCRIZIONE' | translate }}</p>
+        <p class="title-ricetta p-color-primary">{{ ricetta.descrizione }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding-horizontal">
+        <p>{{ 'TEMPO' | translate }}</p>
+        <p class="title-ricetta p-color-primary">{{ ricetta.tempocottura }} {{ 'MINUTI' | translate }}</p>
+      </ion-col>
+      <ion-col class="ion-padding-horizontal">
+        <p>{{ 'DIFFICOLTA' | translate }}</p>
+        <p class="title-ricetta p-color-primary">{{ ricetta.difficolta }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding-horizontal">
+        <p>{{ 'INGREDIENTI' | translate }}</p>
+        <ion-list>
+          <p *ngFor="let ingrediente of ricetta.ingredienti" class="title-ricetta p-color-primary text-left">{{ ingrediente.nome }}</p>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding-horizontal">
+        <p>{{ 'PREPARAZIONE' | translate }}</p>
+        <p class="title-ricetta p-color-primary">{{ ricetta.preparazione }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div>
+    <!-- bottone per andare sulla page Valutazione -->
+    <ion-button size="medium" expand="block" color="primary" class="ion-margin-start ion-margin-end" (click)="goToValutazione()">
+      {{ 'VALUTA_BUTTON' | translate }}
+    </ion-button>
+  </div>
 </ion-content>

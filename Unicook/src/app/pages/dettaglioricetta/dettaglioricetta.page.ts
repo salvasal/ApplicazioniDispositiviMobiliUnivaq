@@ -60,6 +60,10 @@ export class DettaglioricettaPage implements OnInit {
     this.router.navigate(['/tabs/listaricette']);
   }
 
+  goToValutazione() {
+    this.router.navigate(['/valutazione', this.id]);
+  }
+
   insertPreferito() {
     /*if (this.utente != null) {
       this.today = new Date();

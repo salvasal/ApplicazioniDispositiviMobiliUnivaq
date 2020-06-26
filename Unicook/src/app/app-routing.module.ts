@@ -31,6 +31,11 @@ const routes: Routes = [
     path: 'dettaglioricetta/:id',
     loadChildren: () => import('./pages/dettaglioricetta/dettaglioricetta.module').then( m => m.DettaglioricettaPageModule)
   },
+  {
+    path: 'valutazione/:id',
+    loadChildren: () => import('./pages/valutazione/valutazione.module').then( m => m.ValutazionePageModule)
+  },
+
 
 ];
 

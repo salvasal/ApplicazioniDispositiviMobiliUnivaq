@@ -44,5 +44,10 @@
   "PREFERITO_INSERTED": "Ricetta salvata tra i preferiti",
   "PREFERITO_INSERTED_TITLE": "PREFERITI",
   "PREFERITO_DELETED": "Ricetta rimossa tra i preferiti",
-  "PREFERITO_DELETED_TITLE": "PREFERITI RIMOZIONE"
+  "PREFERITO_DELETED_TITLE": "PREFERITI RIMOZIONE",
+  "VALUTA_BUTTON": "VALUTA",
+  "NOME_RICETTA": "Nome della ricetta",
+  "REALIZZATO": "Realizzato da",
+  "TEMPO": "Tempo di cottura",
+  "MINUTI": "minuti"
 }
