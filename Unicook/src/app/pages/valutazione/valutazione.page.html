@@ -1,9 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>valutazione</ion-title>
+    <ion-item lines="none">
+      <!-- Icona inerente alla freccia per tornare alla lista delle ricette -->
+      <ion-icon name="arrow-back-outline" class="ion-float-left" color="light" (click)="goToDettaglioRicetta()"></ion-icon>
+      <!-- Titolo della App UniCook -->
+      <ion-title color="light" class="ion-text-center">UniCook</ion-title>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid class="ion-grid-width-sm">
+    <ion-row>
+      <ion-col class="ion-padding-horizontal">
+        <p class="title-ricetta p-color-primary">{{ ricetta.nomericetta }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding-horizontal">
+        <p>{{ 'VALUTA' | translate }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-icon *ngIf="!isEvaluateLike" name="thumbs-up" class="size-large-icons" (click)="insertLike()"></ion-icon>
+        <ion-icon *ngIf="isEvaluateLike" name="thumbs-up" class="size-large-icons" [style.color]="'#088cd6'" (click)="deleteLike()"></ion-icon>
+        <p>{{ likes.length }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-icon *ngIf="!isEvaluateUnlike" name="thumbs-down" class="size-large-icons" (click)="insertUnlike()"></ion-icon>
+        <ion-icon *ngIf="isEvaluateUnlike" name="thumbs-down" class="size-large-icons" [style.color]="'#088cd6'" (click)="deleteUnlike()"></ion-icon>
+        <p>{{ unlikes.length }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
