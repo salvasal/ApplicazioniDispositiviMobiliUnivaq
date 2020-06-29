@@ -67,7 +67,7 @@
     <!-- Ripeti Password Utente (DA IMPLEMENTARE!!!) -->
     <ion-item>
       <ion-label class="ion-text-start">{{ 'PASSWORD_REPLY' | translate}}</ion-label>
-      <ion-input color="secondary" [type]="showPassword ? 'text' : 'password'" formControlName="password"></ion-input>
+      <ion-input color="secondary" [type]="showConfirmPassword ? 'text' : 'password'" formControlName="password"></ion-input>
       <ion-icon [name]="passwordToggleIconCopy" slot="end" color="primary" (click)="toggleConfirmPassword()"></ion-icon>
     </ion-item>
     <p ion-text class="text08" *ngIf="registrazioneFormModel.get('password').touched && registrazioneFormModel.get('password').invalid">
