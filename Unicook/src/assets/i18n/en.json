@@ -50,5 +50,21 @@
   "REALIZZATO": "Realized by",
   "TEMPO": "Cooking time",
   "MINUTI": "minutes",
-  "VALUTA": "EVALUATE THE RECIPE"
+  "VALUTA": "EVALUATE THE RECIPE",
+  "REGISTRATION_ERROR_TITLE": "Error Registration",
+  "REGISTRATION_ERROR_SUB_TITLE": "One or more fields must be completed",
+  "REGISTRATION_SUCCESS_TITLE": "Registration",
+  "REGISTRATION_SUCCESS_SUB_TITLE": "Registration successfully created!",
+  "NAME": "NAME",
+  "NAME_REQUIRED": "Name required",
+  "SURNAME": "SURNAME",
+  "SURNAME_REQUIRED": "Surname required",
+  "START_DATE": "DATE OF BIRTH",
+  "START_DATE_REQUIRED": "Date of birth required",
+  "GENDER": "GENDER",
+  "GENDER_REQUIRED": "Gender required",
+  "PASSWORD_REPLY": "REPEAT PASSWORD",
+  "PASSWORD_REPLY_REQUIRED": "Password required or incorrect",
+  "REGISTER_BUTTON": "REGISTER"
+
 }
