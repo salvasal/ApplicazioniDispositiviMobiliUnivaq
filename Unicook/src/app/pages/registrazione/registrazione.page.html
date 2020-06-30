@@ -32,7 +32,8 @@
     <!-- Data di nascita Utente -->
     <ion-item>
       <ion-label class="ion-text-start">{{ 'START_DATE' | translate}}</ion-label>
-      <ion-datetime value="1990-02-19" placeholder="Seleziona la data" color="secondary" formControlName="datanascita"></ion-datetime>
+      <!-- <ion-datetime value="1990-02-19" placeholder="Seleziona la data" color="secondary" formControlName="datanascita"></ion-datetime> -->
+      <ion-input color="secondary" type="date" formControlName="datanascita"></ion-input>
     </ion-item>
     <p ion-text class="text08" *ngIf="registrazioneFormModel.get('datanascita').touched && registrazioneFormModel.get('datanascita').invalid">
       <ion-text color="success" class="ion-margin-start"> {{ 'START_DATE_REQUIRED' | translate }} </ion-text>
@@ -64,21 +65,24 @@
     <p ion-text class="text08" *ngIf="registrazioneFormModel.get('password').touched && registrazioneFormModel.get('password').invalid">
       <ion-text color="success" class="ion-margin-start">{{ 'PASSWORD_REQUIRED' | translate }}</ion-text>
     </p>
-    <!-- Ripeti Password Utente (DA IMPLEMENTARE!!!) -->
+    <!-- Ripeti Password Utente -->
     <ion-item>
       <ion-label class="ion-text-start">{{ 'PASSWORD_REPLY' | translate}}</ion-label>
-      <ion-input color="secondary" [type]="showConfirmPassword ? 'text' : 'password'" formControlName="password"></ion-input>
+      <ion-input color="secondary" [type]="showConfirmPassword ? 'text' : 'password'" formControlName="confermaPassword"></ion-input>
       <ion-icon [name]="passwordToggleIconCopy" slot="end" color="primary" (click)="toggleConfirmPassword()"></ion-icon>
     </ion-item>
-    <p ion-text class="text08" *ngIf="registrazioneFormModel.get('password').touched && registrazioneFormModel.get('password').invalid">
+    <p ion-text class="text08" *ngIf="registrazioneFormModel.get('confermaPassword').touched && registrazioneFormModel.get('confermaPassword').invalid">
       <ion-text color="success" class="ion-margin-start">{{ 'PASSWORD_REPLY_REQUIRED' | translate }}</ion-text>
+    </p>
+    <p ion-text class="text08" *ngIf="registrazioneFormModel.get('confermaPassword').value !== registrazioneFormModel.get('password').value">
+      <ion-text color="success" class="ion-margin-start">{{ 'PASSWORD_REPLY_ERROR' | translate }}</ion-text>
     </p>
 
     <br>
 
     <!-- Bottone per registrare un utente -->
     <div margin-top="20px">
-      <ion-button size="medium" expand="block" class="ion-margin-start ion-margin-end" color="primary" [disabled]="!registrazioneFormModel.valid" tappable="true">
+      <ion-button size="medium" expand="block" class="ion-margin-start ion-margin-end" color="primary" [disabled]="!registrazioneFormModel.valid" tappable="true" (click)="onRegister()">
         {{ 'REGISTER_BUTTON' | translate}}
       </ion-button>
     </div>

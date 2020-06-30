@@ -54,7 +54,7 @@
   "REGISTRATION_ERROR_TITLE": "Errore Registrazione",
   "REGISTRATION_ERROR_SUB_TITLE": "Uno o piu' campi devono essere compilati",
   "REGISTRATION_SUCCESS_TITLE": "Registrazione",
-  "REGISTRATION_SUCCESS_SUB_TITLE": "Registrazione avvenuta con successo",
+  "REGISTRATION_SUCCESS_SUB_TITLE": "Registrazione avvenuta con successo, la tua chiave di recupero e': ",
   "NAME": "NOME",
   "NAME_REQUIRED": "Nome obbligatorio",
   "SURNAME": "COGNOME",
@@ -64,6 +64,7 @@
   "GENDER": "SESSO",
   "GENDER_REQUIRED": "Sesso obbligatorio",
   "PASSWORD_REPLY": "RIPETI PASSWORD",
-  "PASSWORD_REPLY_REQUIRED": "Password obbligatoria o non esatta",
+  "PASSWORD_REPLY_REQUIRED": "Password obbligatoria",
+  "PASSWORD_REPLY_ERROR": "Password non coincidono",
   "REGISTER_BUTTON": "REGISTRATI"
 }

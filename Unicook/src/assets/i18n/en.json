@@ -54,7 +54,7 @@
   "REGISTRATION_ERROR_TITLE": "Error Registration",
   "REGISTRATION_ERROR_SUB_TITLE": "One or more fields must be completed",
   "REGISTRATION_SUCCESS_TITLE": "Registration",
-  "REGISTRATION_SUCCESS_SUB_TITLE": "Registration successfully created!",
+  "REGISTRATION_SUCCESS_SUB_TITLE": "Registration successfully created, your recovery key is: ",
   "NAME": "NAME",
   "NAME_REQUIRED": "Name required",
   "SURNAME": "SURNAME",
@@ -64,7 +64,7 @@
   "GENDER": "GENDER",
   "GENDER_REQUIRED": "Gender required",
   "PASSWORD_REPLY": "REPEAT PASSWORD",
-  "PASSWORD_REPLY_REQUIRED": "Password required or incorrect",
+  "PASSWORD_REPLY_REQUIRED": "Password required",
+  "PASSWORD_REPLY_ERROR": "Password mismatch",
   "REGISTER_BUTTON": "REGISTER"
-
 }
