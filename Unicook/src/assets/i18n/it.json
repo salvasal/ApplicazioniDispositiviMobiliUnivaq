@@ -66,5 +66,6 @@
   "PASSWORD_REPLY": "RIPETI PASSWORD",
   "PASSWORD_REPLY_REQUIRED": "Password obbligatoria",
   "PASSWORD_REPLY_ERROR": "Password non coincidono",
-  "REGISTER_BUTTON": "REGISTRATI"
+  "REGISTER_BUTTON": "REGISTRATI",
+  "PREFERITO_HEADER": "La tua lista di ricette preferite"
 }
