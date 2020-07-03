@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-item lines="none" class="text-color-bottom ion-margin-horizontal">SELEZIONA GLI INGREDIENTI</ion-item>
+  <ion-item lines="none" class="text-color-bottom ion-margin-horizontal">{{'INGREDIENTI_HEADER' | translate}}</ion-item>
   <ion-list>
     <ion-item *ngFor="let ingrediente of ingredienti">
       <ion-label class="ion-text-left ion-margin-horizontal">{{ingrediente.nome}}</ion-label>
@@ -9,6 +9,6 @@
 </ion-content>
 <ion-footer>
   <ion-button size="medium" expand="block" class="ion-margin-start ion-margin-end" color="primary">
-    CERCA
+    {{'CERCA_BUTTON' | translate}}
   </ion-button>
 </ion-footer>

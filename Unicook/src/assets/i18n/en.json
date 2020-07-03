@@ -67,5 +67,7 @@
   "PASSWORD_REPLY_REQUIRED": "Password required",
   "PASSWORD_REPLY_ERROR": "Password mismatch",
   "REGISTER_BUTTON": "REGISTER",
-  "PREFERITO_HEADER": "Your list of favorite recipes"
+  "PREFERITO_HEADER": "Your list of favorite recipes",
+  "INGREDIENTI_HEADER": "SELECT THE INGREDIENTS",
+  "CERCA_BUTTON": "SEARCH"
 }
