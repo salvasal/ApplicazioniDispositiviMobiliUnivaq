@@ -3,6 +3,7 @@ import {Ricetta} from '../../models/ricetta.models';
 import {RicettaService} from '../../services/ricetta.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Categoria} from '../../models/categoria.models';
+import {Ingrediente} from '../../models/ingrediente.models';
 
 @Component({
   selector: 'app-listaricette',
@@ -11,6 +12,7 @@ import {Categoria} from '../../models/categoria.models';
 })
 export class ListaricettePage implements OnInit {
   private currentCategoria: Categoria = null;
+  private currentIngredienti: Ingrediente[] = [];
 
   private ricette: Ricetta[] = [];
   private ricetteFiltered: Ricetta[] = [];
@@ -23,12 +25,25 @@ export class ListaricettePage implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
-        this.currentCategoria = this.router.getCurrentNavigation().extras.state.data;
-        console.log(this.currentCategoria);
-        this.ricetteFiltered = this.ricette.filter( (element) => {
-          return element.categoria.nome.toLowerCase().indexOf(this.currentCategoria.nome.toLowerCase()) > -1;
-        });
-        this.currentCategoria = null;
+        if (this.router.getCurrentNavigation().extras.state.data.IDcategoria !== undefined) {
+          this.currentCategoria = this.router.getCurrentNavigation().extras.state.data;
+          console.log(this.currentCategoria);
+          this.ricetteFiltered = this.ricette.filter( (element) => {
+            return element.categoria.nome.toLowerCase().indexOf(this.currentCategoria.nome.toLowerCase()) > -1;
+          });
+          this.currentCategoria = null;
+        } else {
+          this.currentIngredienti = this.router.getCurrentNavigation().extras.state.data;
+          console.log(this.currentIngredienti);
+          this.ricetteFiltered = this.ricette.filter( (element) => {
+            return element.ingredienti.filter(item => {
+              return this.currentIngredienti.filter(value => {
+                return item.nome.toLowerCase().indexOf(value.nome.toLowerCase()) > -1;
+              });
+            });
+          });
+          this.currentIngredienti = [];
+        }
       } else {
           console.log(this.ricette);
           this.ricetteFiltered = this.ricette;
@@ -44,7 +59,6 @@ export class ListaricettePage implements OnInit {
       console.log(error);
     });
   }
-
 
   getListFiltered(event) {
     const val = event.target.value; // recupera il valore immesso dall'utente
