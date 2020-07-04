@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Ingrediente} from '../../models/ingrediente.models';
 import {IngredienteService} from '../../services/ingrediente.service';
+import {NavigationExtras, Router} from '@angular/router';
 
 @Component({
   selector: 'app-listaingredienti',
@@ -11,7 +12,8 @@ export class ListaingredientiPage implements OnInit {
   ingredienti: Ingrediente[] = [];
   selectedArray: Ingrediente[] = [];
 
-  constructor(private ingredienteService: IngredienteService) { }
+  constructor(private ingredienteService: IngredienteService,
+              private router: Router) { }
 
   ngOnInit() {
     this.ingredienteService.getAll().subscribe(result => {
@@ -40,6 +42,11 @@ export class ListaingredientiPage implements OnInit {
       this.selectedArray = newArray;
     }
     console.log(this.selectedArray);
+  }
+
+  filterRicette() {
+    const navigationExtras: NavigationExtras = { state: { data: this.selectedArray } };
+    this.router.navigate(['/tabs/listaricette'], navigationExtras);
   }
 
 }

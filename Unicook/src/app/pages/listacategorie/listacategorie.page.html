@@ -2,7 +2,7 @@
   <ion-item lines="none" class="text-color-bottom">{{ 'CATEGORIA_TITLE' | translate }}</ion-item>
     <ion-list>
       <ion-card class="bg-secondary" *ngFor="let categoria of categorie">
-        <ion-item button="true">
+        <ion-item (click)="filterRicette(categoria)">
             <ion-label style="text-align: center">
               <ion-text color="light">
                 {{ categoria.nome }}

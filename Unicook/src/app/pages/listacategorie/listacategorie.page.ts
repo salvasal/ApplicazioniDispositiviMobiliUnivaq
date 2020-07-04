@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Categoria} from '../../models/categoria.models';
 import {CategoriaService} from '../../services/categoria.service';
+import {NavigationExtras, Router} from '@angular/router';
 
 @Component({
   selector: 'app-listacategorie',
@@ -10,7 +11,8 @@ import {CategoriaService} from '../../services/categoria.service';
 export class ListacategoriePage implements OnInit {
   categorie: Categoria[] = [];
 
-  constructor(private categoriaService: CategoriaService) { }
+  constructor(private categoriaService: CategoriaService,
+              private router: Router) { }
 
   ngOnInit() {
     this.categoriaService.getAll().subscribe(result => {
@@ -19,6 +21,11 @@ export class ListacategoriePage implements OnInit {
     }, error => {
       console.log(error);
     });
+  }
+
+  filterRicette(categoria) {
+    const navigationExtras: NavigationExtras = { state: { data: categoria } };
+    this.router.navigate(['/tabs/listaricette'], navigationExtras);
   }
 
 }
