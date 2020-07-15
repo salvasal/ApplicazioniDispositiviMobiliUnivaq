@@ -9,6 +9,7 @@ import {PhotoService} from '../../services/photo.service';
 import {Ricetta} from '../../models/ricetta.models';
 import {UtenteService} from '../../services/utente.service';
 import {RicettaService} from '../../services/ricetta.service';
+import {IngredienteService} from '../../services/ingrediente.service';
 
 @Component({
   selector: 'app-pubblicaricetta',
@@ -30,11 +31,7 @@ export class PubblicaricettaPage implements OnInit {
   difficolta: string[] = ['FACILE', 'MEDIO', 'DIFFICILE'];
   tempocottura: number[] = [30, 60, 90, 120];
   categorie: Categoria[] = [];
-  ingredienti: Ingrediente[] = [{ IDingrediente: 0, nome: 'Pomodorini' },
-    { IDingrediente: 1, nome: 'Sale' },
-    { IDingrediente: 2, nome: 'Pepe' },
-    { IDingrediente: 3, nome: 'Pane' },
-    { IDingrediente: 4, nome: 'Olio extravergine'} ];
+  ingredienti: Ingrediente[] = [];
 
   constructor(private navController: NavController,
               private formBuilder: FormBuilder,
@@ -42,6 +39,7 @@ export class PubblicaricettaPage implements OnInit {
               private translateService: TranslateService,
               private categoriaService: CategoriaService,
               private utenteService: UtenteService,
+              private ingredienteService: IngredienteService,
               private ricettaService: RicettaService,
               public photoService: PhotoService) { }
 
@@ -66,14 +64,12 @@ export class PubblicaricettaPage implements OnInit {
       console.log(error);
     });
 
-    /*
     this.ingredienteService.getAll().subscribe(result => {
       this.ingredienti = result;
       // tslint:disable-next-line:no-shadowed-variable
     }, error => {
       console.log(error);
     });
-    */
 
   }
 

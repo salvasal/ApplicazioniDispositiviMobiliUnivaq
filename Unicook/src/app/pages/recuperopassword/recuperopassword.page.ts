@@ -55,6 +55,7 @@ export class RecuperopasswordPage implements OnInit {
   recovery() {
     this.recupero = this.recuperoFormModel.value;
     this.utenteService.getAll().subscribe(result => {
+      console.log(result);
       for (const element of result) {
         if (element.username === this.recupero.username && element.chiaverecupero === this.recupero.chiaverecupero) {
           this.showAlertPassword(element.password);

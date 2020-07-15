@@ -20,7 +20,7 @@ export class UtenteService {
   private loggedIn$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   private utente$: BehaviorSubject<Utente> = new BehaviorSubject<Utente>({} as Utente);
 
-  utenteList: Utente[] = [];
+  // utenteList: Utente[] = [];
 
   constructor(private http: HttpClient,
               private storage: Storage) {
@@ -76,9 +76,9 @@ export class UtenteService {
 
   // Metodo che verrà utilizzata nella logica del recupero delle credenziali
   getAll(): Observable<Utente[]> {
-    // return this.http.get<Utente[]>(URL_API.allUtenti);
+    return this.http.get<Utente[]>(URL_API.allUtenti);
 
-    this.utenteList = [{
+    /*this.utenteList = [{
       IDutente: 0,
       username: 'lorsalvi',
       password: 'ciao',
@@ -97,7 +97,7 @@ export class UtenteService {
       sesso: '',
       datanascita: ''
     } ];
-    return of(this.utenteList);
+    return of(this.utenteList);*/
   }
 
   // Metodo che verrà utilizzato per la creazione di un nuovo utente

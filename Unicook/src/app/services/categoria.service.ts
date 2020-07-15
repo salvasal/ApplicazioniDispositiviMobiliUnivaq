@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {Categoria} from '../models/categoria.models';
 import {URL_API} from '../constants';
 
@@ -8,21 +8,11 @@ import {URL_API} from '../constants';
   providedIn: 'root'
 })
 export class CategoriaService {
-  // NOTABENE, RIMUOVERE QUESTA DICHIARAZIONE QUANDO IL SERVER SARà PRONTO E ANCHE IMPORT DI OF
-  // private categorie: Categoria[] = [];
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Categoria[]> {
     return this.http.get<Categoria[]>(URL_API.allCategorie);
-
-    // tslint:disable-next-line:label-position
-    /*this.categorie = [{ IDcategoria: 0, nome: 'Antipasti' },
-      { IDcategoria: 1, nome: 'Primi Piatti' },
-      { IDcategoria: 2, nome: 'Secondi Piatti' },
-      { IDcategoria: 3, nome: 'Contorni' },
-      { IDcategoria: 4, nome: 'Dolci'} ];
-    return of(this.categorie);*/
   }
 
   get(id: number): Observable<Categoria> {
