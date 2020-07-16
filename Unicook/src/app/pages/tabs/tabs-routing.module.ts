@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
+import {AuthGuard} from '../../guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -40,7 +41,8 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('../preferiti/preferiti.module').then( m => m.PreferitiPageModule)
+            loadChildren: () => import('../preferiti/preferiti.module').then( m => m.PreferitiPageModule),
+            canActivate: [AuthGuard]
           }
         ]
       },
