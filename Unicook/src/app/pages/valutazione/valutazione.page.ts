@@ -41,15 +41,23 @@ export class ValutazionePage implements OnInit {
 
     this.utente = this.utenteService.getUtente().value;
 
+    this.utenteService.getAll().subscribe(result => {
+      for (const element of result) {
+        if ( element.username === this.utente.username) {
+          this.utente = element;
+        }
+      }
+    });
+
     this.valutazioneService.getAll().subscribe(result => {
       for (const element of result) {
-        if (element.ricetta.IDricetta === this.ricetta.IDricetta && element.utente.IDutente === this.utente.IDutente) {
+        if (element.ricetta.idricetta === this.ricetta.idricetta && element.utente.idutente === this.utente.idutente) {
           if (element.like === true) {
             this.isEvaluateLike = true;
-            this.evaluationCurrent = element.IDvalutazione;
+            this.evaluationCurrent = element.idvalutazione;
           } else {
             this.isEvaluateUnlike = true;
-            this.evaluationCurrent = element.IDvalutazione;
+            this.evaluationCurrent = element.idvalutazione;
           }
         }
       }
@@ -61,10 +69,10 @@ export class ValutazionePage implements OnInit {
   getNumberLikesUnlikes() {
     this.valutazioneService.getAll().subscribe(result => {
       for (const element of result) {
-        if (element.ricetta.IDricetta === this.ricetta.IDricetta && element.like === true ) {
+        if (element.ricetta.idricetta === this.ricetta.idricetta && element.like === true ) {
           this.likes.push(element);
         }
-        if (element.ricetta.IDricetta === this.ricetta.IDricetta && element.unlike === true ) {
+        if (element.ricetta.idricetta === this.ricetta.idricetta && element.unlike === true ) {
           this.unlikes.push(element);
         }
       }

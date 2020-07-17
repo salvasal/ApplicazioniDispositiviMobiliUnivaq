@@ -10,6 +10,7 @@ import {Ricetta} from '../../models/ricetta.models';
 import {UtenteService} from '../../services/utente.service';
 import {RicettaService} from '../../services/ricetta.service';
 import {IngredienteService} from '../../services/ingrediente.service';
+import {Utente} from '../../models/utente.models';
 
 @Component({
   selector: 'app-pubblicaricetta',
@@ -27,6 +28,7 @@ export class PubblicaricettaPage implements OnInit {
   today: Date;
   date: string;
   time: string;
+  utente: Utente = new Utente();
 
   difficolta: string[] = ['FACILE', 'MEDIO', 'DIFFICILE'];
   tempocottura: number[] = [30, 60, 90, 120];
@@ -71,6 +73,15 @@ export class PubblicaricettaPage implements OnInit {
       console.log(error);
     });
 
+    this.utente = this.utenteService.getUtente().value;
+
+    this.utenteService.getAll().subscribe(result => {
+      for (const element of result) {
+        if ( element.username === this.utente.username) {
+          this.utente = element;
+        }
+      }
+    });
   }
 
   onSubmit() {
@@ -85,20 +96,15 @@ export class PubblicaricettaPage implements OnInit {
       this.ricetta.data = this.date;
       this.ricetta.ora = this.time;
       this.ricetta.immagini = this.photoService.photos;
-      this.utenteService.getUtente().subscribe( result => {
-        this.ricetta.utente = result;
-        this.ricettaService.insert(this.ricetta).subscribe(resultData => {
+      this.ricetta.utente = this.utente;
+      this.ricettaService.insert(this.ricetta).subscribe(resultData => {
           console.log(resultData);
           this.photoService.removeData();
           this.showCreateSuccess();
           this.resetForm();
           // tslint:disable-next-line:no-shadowed-variable
-        }, error => {
-          console.log(error);
-        });
-        // tslint:disable-next-line:no-shadowed-variable
       }, error => {
-        console.log(error);
+          console.log(error);
       });
     }
   }

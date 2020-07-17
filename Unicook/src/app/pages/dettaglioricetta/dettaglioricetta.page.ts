@@ -26,6 +26,8 @@ export class DettaglioricettaPage implements OnInit {
   utente: Utente = new Utente();
   preferito: Preferito = new Preferito();
   today: Date;
+  categoria: string;
+  username: string;
 
   constructor(private activatedRoute: ActivatedRoute,
               private ricettaService: RicettaService,
@@ -41,11 +43,22 @@ export class DettaglioricettaPage implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.ricettaService.get(this.id).subscribe(result => {
       this.ricetta = result;
+      this.categoria = result.categoria.nome;
+      this.username = result.utente.username;
+      console.log(this.ricetta);
     }, error => {
       console.error(error);
     });
 
-    /*this.utente = this.utenteService.getUtente().value;
+    this.utente = this.utenteService.getUtente().value;
+
+    this.utenteService.getAll().subscribe(result => {
+      for (const element of result) {
+        if ( element.username === this.utente.username) {
+          this.utente = element;
+        }
+      }
+    });
 
     this.preferitoService.getAll().subscribe(result => {
       for (const element of result) {
@@ -53,7 +66,7 @@ export class DettaglioricettaPage implements OnInit {
           this.isPreferito = true;
         }
       }
-    });*/
+    });
   }
 
   goToListaRicette() {
@@ -65,11 +78,12 @@ export class DettaglioricettaPage implements OnInit {
   }
 
   insertPreferito() {
-    /*if (this.utente != null) {
+    if (this.utente != null) {
       this.today = new Date();
       this.preferito.data = this.today.getDate() + '-' + (this.today.getMonth() + 1) + '-' + this.today.getFullYear();
       this.preferito.utente = this.utente;
       this.preferito.ricetta = this.ricetta;
+      console.log(this.preferito);
       this.preferitoService.insert(this.preferito).subscribe(result => {
         this.isPreferito = true;
         this.preferito = null;
@@ -79,17 +93,17 @@ export class DettaglioricettaPage implements OnInit {
       });
     } else {
       this.router.navigate(['/login']);
-    }*/
+    }
   }
 
   deletePreferito() {
-    /*if (this.utente != null) {
+    if (this.utente != null) {
       this.preferitoService.getAll().subscribe(result => {
         for (const element of result) {
           if (element.ricetta === this.ricetta && element.utente === this.utente) {
             this.preferitoService.delete(element.IDpreferito).subscribe(next => {
              this.isPreferito = false;
-              this.showDelete();
+             this.showDelete();
             }, error => {
               console.error(error);
             });
@@ -100,7 +114,7 @@ export class DettaglioricettaPage implements OnInit {
       });
     } else {
       this.router.navigate(['/login']);
-    }*/
+    }
   }
 
   async showSuccess() {

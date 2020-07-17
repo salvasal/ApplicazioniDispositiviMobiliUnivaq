@@ -10,12 +10,12 @@ import {URL_API} from '../constants';
 export class ValutazioneService {
 
   private valutazioni: Valutazione[] = [
-    { IDvalutazione: 0,
+    { idvalutazione: 0,
       data: '27/06/2020',
       like: true,
       unlike: false,
       utente: {
-        IDutente: 0,
+        idutente: 0,
         username: 'lorsalvi',
         password: 'ciao',
         chiaverecupero: 'chiave1',
@@ -25,7 +25,7 @@ export class ValutazioneService {
         datanascita: ''
       },
       ricetta: {
-        IDricetta: 0,
+        idricetta: 0,
         nomericetta: 'Antipasto misto',
         descrizione: 'Questa è una ricetta fake per verificare se il contenuto del campo descrizione sia totalmente leggibile',
         preparazione: 'Questa è una ricetta fake per verificare se il contenuto del campo preparazione sia totalmente leggibile',
@@ -33,12 +33,12 @@ export class ValutazioneService {
         difficolta: 'MEDIO',
         data: '24/06/2020',
         ora: '18:30',
-        categoria: { IDcategoria: 0, nome: 'Antipasti' },
+        categoria: { id: 0, nome: 'Antipasti' },
         ingredienti: [{ IDingrediente: 0, nome: 'Formaggio'},
           { IDingrediente: 1, nome: 'Salumi'}],
-        immagini: [{ filepath: '', webviewPath: 'assets/images/antipasto.jpg', base64: ''}],
+        immagini: [{ filepath: '', webviewpath: 'assets/images/antipasto.jpg', base64: ''}],
         utente: {
-          IDutente: 0,
+          idutente: 0,
           username: 'lorsalvi',
           password: 'ciao',
           chiaverecupero: 'chiave1',
@@ -47,12 +47,12 @@ export class ValutazioneService {
           sesso: '',
           datanascita: ''
         }}}, {
-      IDvalutazione: 1,
+      idvalutazione: 1,
       data: '25/06/2020',
       like: false,
       unlike: true,
       utente: {
-        IDutente: 0,
+        idutente: 0,
         username: 'lorsalvi',
         password: 'ciao',
         chiaverecupero: 'chiave1',
@@ -62,7 +62,7 @@ export class ValutazioneService {
         datanascita: ''
       },
       ricetta: {
-        IDricetta: 0,
+        idricetta: 0,
         nomericetta: 'Antipasto misto',
         descrizione: 'Questa è una ricetta fake per verificare se il contenuto del campo descrizione sia totalmente leggibile',
         preparazione: 'Questa è una ricetta fake per verificare se il contenuto del campo preparazione sia totalmente leggibile',
@@ -70,12 +70,12 @@ export class ValutazioneService {
         difficolta: 'MEDIO',
         data: '24/06/2020',
         ora: '18:30',
-        categoria: { IDcategoria: 0, nome: 'Antipasti' },
+        categoria: { id: 0, nome: 'Antipasti' },
         ingredienti: [{ IDingrediente: 0, nome: 'Formaggio'},
           { IDingrediente: 1, nome: 'Salumi'}],
-        immagini: [{ filepath: '', webviewPath: 'assets/images/antipasto.jpg', base64: ''}],
+        immagini: [{ filepath: '', webviewpath: 'assets/images/antipasto.jpg', base64: ''}],
         utente: {
-          IDutente: 0,
+          idutente: 0,
           username: 'lorsalvi',
           password: 'ciao',
           chiaverecupero: 'chiave1',
@@ -102,7 +102,7 @@ export class ValutazioneService {
   }
 
   update(valutazione: Valutazione): Observable<Valutazione> {
-    return this.http.put<Valutazione>(URL_API.singleValutazione(valutazione.IDvalutazione), valutazione);
+    return this.http.put<Valutazione>(URL_API.singleValutazione(valutazione.idvalutazione), valutazione);
   }
 
   delete(id: number): Observable<Valutazione> {

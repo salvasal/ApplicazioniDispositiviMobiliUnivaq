@@ -4,7 +4,7 @@ import {Photo} from './photo.models';
 import {Utente} from './utente.models';
 
 export class Ricetta {
-    IDricetta: number;
+    idricetta: number;
     nomericetta: string;
     descrizione: string;
     preparazione: string;

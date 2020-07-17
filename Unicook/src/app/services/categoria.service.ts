@@ -24,7 +24,7 @@ export class CategoriaService {
   }
 
   update(categoria: Categoria): Observable<Categoria> {
-    return this.http.put<Categoria>(URL_API.singleCategoria(categoria.IDcategoria), categoria);
+    return this.http.put<Categoria>(URL_API.singleCategoria(categoria.id), categoria);
   }
 
   delete(id: number): Observable<Categoria> {

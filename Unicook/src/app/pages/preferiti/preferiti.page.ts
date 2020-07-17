@@ -20,9 +20,17 @@ export class PreferitiPage implements OnInit {
   ngOnInit() {
     this.utente = this.utenteService.getUtente().value;
 
+    this.utenteService.getAll().subscribe(result => {
+      for (const element of result) {
+        if ( element.username === this.utente.username) {
+          this.utente = element;
+        }
+      }
+    });
+
     this.preferitoService.getAll().subscribe(result => {
       for (const element of result) {
-        if ( element.utente === this.utente ) {
+        if ( element.utente.idutente === this.utente.idutente ) {
           this.preferiti.push(element);
         }
       }

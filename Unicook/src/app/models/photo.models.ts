@@ -1,6 +1,6 @@
 export class Photo {
     id?: number;
     filepath: string;
-    webviewPath: string;
+    webviewpath: string;
     base64?: string;
 }

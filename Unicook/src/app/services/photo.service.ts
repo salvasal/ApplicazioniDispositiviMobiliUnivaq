@@ -23,7 +23,7 @@ export class PhotoService {
 
     this.photos.unshift({
       filepath: 'soon...',
-      webviewPath: capturedPhoto.webPath
+      webviewpath: capturedPhoto.webPath
     });
 
     Storage.set({

@@ -25,7 +25,7 @@ export class ListaricettePage implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
-        if (this.router.getCurrentNavigation().extras.state.data.IDcategoria !== undefined) {
+        if (this.router.getCurrentNavigation().extras.state.data.id !== undefined) {
           this.currentCategoria = this.router.getCurrentNavigation().extras.state.data;
           console.log(this.currentCategoria);
           this.ricetteFiltered = this.ricette.filter( (element) => {

@@ -18,12 +18,12 @@
   <ion-grid class="ion-grid-width-sm">
     <ion-row>
       <ion-col *ngFor="let immagine of ricetta.immagini">
-        <ion-img src="{{ immagine.webviewPath }}"></ion-img>
+        <ion-img src="{{ immagine.webviewpath }}"></ion-img>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="ion-margin-top ion-padding-horizontal">
-        <ion-badge class="title-ricetta" color="primary">{{ ricetta.categoria.nome }}</ion-badge>
+        <ion-badge class="title-ricetta" color="primary">{{ categoria }}</ion-badge>
       </ion-col>
       <ion-col>
         <p class="title-ricetta p-color-primary">{{ ricetta.data }} {{ ricetta.ora }}</p>
@@ -36,7 +36,7 @@
       </ion-col>
       <ion-col class="ion-padding-horizontal">
         <p>{{ 'REALIZZATO' | translate }}</p>
-        <p class="title-ricetta p-color-primary">{{ ricetta.utente.username }}</p>
+        <p class="title-ricetta p-color-primary">{{ username }}</p>
       </ion-col>
     </ion-row>
     <ion-row>
