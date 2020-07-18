@@ -66,7 +66,6 @@ export class ListaricettePage implements OnInit {
       this.ricetteFiltered = this.ricette.filter( (element) => {
         return element.nomericetta.toLowerCase().indexOf(val.toLowerCase()) > -1;
       });
-      console.log(this.ricetteFiltered);
     } else { this.ricetteFiltered = this.ricette; }
   }
 

@@ -87,7 +87,7 @@ export class RegistrazionePage implements OnInit {
     }
   }
 
-  // metodo per generare chiaveRecupero
+
    createChiaveRecupero(length) {
     let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

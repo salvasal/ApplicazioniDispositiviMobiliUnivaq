@@ -31,7 +31,7 @@ export class PubblicaricettaPage implements OnInit {
   utente: Utente = new Utente();
 
   difficolta: string[] = ['FACILE', 'MEDIO', 'DIFFICILE'];
-  tempocottura: number[] = [30, 60, 90, 120];
+  tempocottura: string[] = ['trenta', 'sessanta', 'novanta', 'centoventi'];
   categorie: Categoria[] = [];
   ingredienti: Ingrediente[] = [];
 
@@ -85,10 +85,6 @@ export class PubblicaricettaPage implements OnInit {
   }
 
   onSubmit() {
-    // tslint:disable-next-line:triple-equals
-    if ( this.photoService.photos.length == 0 ) {
-      this.showCreateError();
-    } else {
       this.ricetta = this.creaFormModel.value;
       this.today = new Date();
       this.date = this.today.getDate() + '-' + (this.today.getMonth() + 1) + '-' + this.today.getFullYear();
@@ -98,7 +94,6 @@ export class PubblicaricettaPage implements OnInit {
       this.ricetta.immagini = this.photoService.photos;
       this.ricetta.utente = this.utente;
       this.ricettaService.insert(this.ricetta).subscribe(resultData => {
-          console.log(resultData);
           this.photoService.removeData();
           this.showCreateSuccess();
           this.resetForm();
@@ -106,7 +101,6 @@ export class PubblicaricettaPage implements OnInit {
       }, error => {
           console.log(error);
       });
-    }
   }
 
   async showCreateSuccess() {

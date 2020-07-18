@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {Valutazione} from '../models/valutazione.models';
 import {URL_API} from '../constants';
 
@@ -9,88 +9,10 @@ import {URL_API} from '../constants';
 })
 export class ValutazioneService {
 
-  private valutazioni: Valutazione[] = [
-    { idvalutazione: 0,
-      data: '27/06/2020',
-      like: true,
-      unlike: false,
-      utente: {
-        idutente: 0,
-        username: 'lorsalvi',
-        password: 'ciao',
-        chiaverecupero: 'chiave1',
-        nome: '',
-        cognome: '',
-        sesso: '',
-        datanascita: ''
-      },
-      ricetta: {
-        idricetta: 0,
-        nomericetta: 'Antipasto misto',
-        descrizione: 'Questa è una ricetta fake per verificare se il contenuto del campo descrizione sia totalmente leggibile',
-        preparazione: 'Questa è una ricetta fake per verificare se il contenuto del campo preparazione sia totalmente leggibile',
-        tempocottura: 10,
-        difficolta: 'MEDIO',
-        data: '24/06/2020',
-        ora: '18:30',
-        categoria: { id: 0, nome: 'Antipasti' },
-        ingredienti: [{ IDingrediente: 0, nome: 'Formaggio'},
-          { IDingrediente: 1, nome: 'Salumi'}],
-        immagini: [{ filepath: '', webviewpath: 'assets/images/antipasto.jpg', base64: ''}],
-        utente: {
-          idutente: 0,
-          username: 'lorsalvi',
-          password: 'ciao',
-          chiaverecupero: 'chiave1',
-          nome: '',
-          cognome: '',
-          sesso: '',
-          datanascita: ''
-        }}}, {
-      idvalutazione: 1,
-      data: '25/06/2020',
-      like: false,
-      unlike: true,
-      utente: {
-        idutente: 0,
-        username: 'lorsalvi',
-        password: 'ciao',
-        chiaverecupero: 'chiave1',
-        nome: '',
-        cognome: '',
-        sesso: '',
-        datanascita: ''
-      },
-      ricetta: {
-        idricetta: 0,
-        nomericetta: 'Antipasto misto',
-        descrizione: 'Questa è una ricetta fake per verificare se il contenuto del campo descrizione sia totalmente leggibile',
-        preparazione: 'Questa è una ricetta fake per verificare se il contenuto del campo preparazione sia totalmente leggibile',
-        tempocottura: 10,
-        difficolta: 'MEDIO',
-        data: '24/06/2020',
-        ora: '18:30',
-        categoria: { id: 0, nome: 'Antipasti' },
-        ingredienti: [{ IDingrediente: 0, nome: 'Formaggio'},
-          { IDingrediente: 1, nome: 'Salumi'}],
-        immagini: [{ filepath: '', webviewpath: 'assets/images/antipasto.jpg', base64: ''}],
-        utente: {
-          idutente: 0,
-          username: 'lorsalvi',
-          password: 'ciao',
-          chiaverecupero: 'chiave1',
-          nome: '',
-          cognome: '',
-          sesso: '',
-          datanascita: ''
-        }}}
-  ];
-
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Valutazione[]> {
-    // return this.http.get<Valutazione[]>(URL_API.allValutazioni);
-    return of(this.valutazioni);
+    return this.http.get<Valutazione[]>(URL_API.allValutazioni);
   }
 
   get(id: number): Observable<Valutazione> {

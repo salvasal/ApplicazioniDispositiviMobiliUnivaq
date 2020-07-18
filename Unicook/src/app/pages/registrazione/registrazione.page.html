@@ -32,7 +32,6 @@
     <!-- Data di nascita Utente -->
     <ion-item>
       <ion-label class="ion-text-start">{{ 'START_DATE' | translate}}</ion-label>
-      <!-- <ion-datetime value="1990-02-19" placeholder="Seleziona la data" color="secondary" formControlName="datanascita"></ion-datetime> -->
       <ion-input color="secondary" type="date" formControlName="datanascita"></ion-input>
     </ion-item>
     <p ion-text class="text08" *ngIf="registrazioneFormModel.get('datanascita').touched && registrazioneFormModel.get('datanascita').invalid">

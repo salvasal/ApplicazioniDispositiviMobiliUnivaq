@@ -90,7 +90,6 @@ export class ValutazionePage implements OnInit {
     this.valutazione.data = this.today.getDate() + '-' + (this.today.getMonth() + 1) + '-' + this.today.getFullYear();
     this.valutazioneService.insert(this.valutazione).subscribe(result => {
       this.getNumberLikesUnlikes();
-      this.deleteUnlike();
       this.isEvaluateLike = true;
       this.valutazione = null;
     }, error => {
@@ -107,7 +106,6 @@ export class ValutazionePage implements OnInit {
     this.valutazione.data = this.today.getDate() + '-' + (this.today.getMonth() + 1) + '-' + this.today.getFullYear();
     this.valutazioneService.insert(this.valutazione).subscribe(result => {
       this.getNumberLikesUnlikes();
-      this.deleteLike();
       this.isEvaluateUnlike = true;
       this.valutazione = null;
     }, error => {

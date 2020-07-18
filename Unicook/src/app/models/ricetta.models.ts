@@ -8,7 +8,7 @@ export class Ricetta {
     nomericetta: string;
     descrizione: string;
     preparazione: string;
-    tempocottura: number;
+    tempocottura: string;
     difficolta: string;
     data: string;
     ora: string;

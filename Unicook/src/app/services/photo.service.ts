@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Plugins, CameraResultType, Capacitor, FilesystemDirectory,
-  CameraPhoto, CameraSource } from '@capacitor/core';
+import { Plugins, CameraResultType, FilesystemDirectory,
+  CameraSource } from '@capacitor/core';
 import {Photo} from '../models/photo.models';
 const { Camera, Filesystem, Storage } = Plugins;
 
@@ -29,32 +29,24 @@ export class PhotoService {
     Storage.set({
       key: this.PHOTO_STORAGE,
       value: JSON.stringify(this.photos.map(p => {
-        // Don't save the base64 representation of the photo data,
-        // since it's already saved on the Filesystem
         const photoCopy = { ...p };
         delete photoCopy.base64;
 
         return photoCopy;
       }))
     });
-
-    console.log(this.photos);
   }
 
   public async loadSaved() {
-    // Retrieve cached photo array data
     const photos = await Storage.get({ key: this.PHOTO_STORAGE });
     this.photos = JSON.parse(photos.value) || [];
 
-    // Display the photo by reading into base64 format
     for (const photo of this.photos) {
-      // Read each saved photo's data from the Filesystem
       const readFile = await Filesystem.readFile({
         path: photo.filepath,
         directory: FilesystemDirectory.Data
       });
 
-      // Web platform only: Save the photo into the base64 field
       photo.base64 = `data:image/jpeg;base64,${readFile.data}`;
     }
   }

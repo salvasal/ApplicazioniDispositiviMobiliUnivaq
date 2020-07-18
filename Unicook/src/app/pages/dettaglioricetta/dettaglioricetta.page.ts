@@ -45,7 +45,6 @@ export class DettaglioricettaPage implements OnInit {
       this.ricetta = result;
       this.categoria = result.categoria.nome;
       this.username = result.utente.username;
-      console.log(this.ricetta);
     }, error => {
       console.error(error);
     });
@@ -83,7 +82,6 @@ export class DettaglioricettaPage implements OnInit {
       this.preferito.data = this.today.getDate() + '-' + (this.today.getMonth() + 1) + '-' + this.today.getFullYear();
       this.preferito.utente = this.utente;
       this.preferito.ricetta = this.ricetta;
-      console.log(this.preferito);
       this.preferitoService.insert(this.preferito).subscribe(result => {
         this.isPreferito = true;
         this.preferito = null;

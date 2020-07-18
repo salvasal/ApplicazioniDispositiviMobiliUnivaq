@@ -59,7 +59,6 @@ export class UtenteService {
 
   // Ritorna utente corrente
   getUtente(): BehaviorSubject<Utente> {
-    console.log(this.utente$);
     return this.utente$;
   }
 
